@@ -1,0 +1,1817 @@
+/*--------------------------------------------------------------
+
+# CSS para Impressão
+
+versão: 1.0
+
+--------------------------------------------------------------*/
+
+/* -------------------------------- 
+
+Resetando os estilos
+
+-------------------------------- */
+
+*{
+  color:#000 !important;
+  box-sizing: border-box;
+}
+
+/** {
+	background:transparent !important;
+	color:#000 !important;
+	text-shadow:none !important;
+	filter:none !important;
+	-ms-filter:none !important;
+}*/
+
+body {
+	margin:0;
+	padding:0;
+	line-height: normal;
+}
+
+
+/* -------------------------------- 
+
+Variáveis Globais
+
+-------------------------------- */
+
+:root {
+
+ /*Cores Primárias*/ 
+  --azulIFHT: #00A0DD;
+  --azulIFHT-over: #00B7FD;
+  --azulIFHT-pressed: #008EC6;
+
+  --marinhoIFHT: #00478A;
+  --marinhoIFHT-over: #005AAE;
+  --marinhoIFHT-pressed: #003261;  
+
+  --brancoIFHT: #fff;
+  --brancoIFHT-over: #EFF7FF;
+  --brancoIFHT-pressed: #DAE8F7;
+
+
+  /*Cores Secundárias*/ 
+
+  --turquesaIFHT: #62CBC9;
+  --turquesaIFHT-over: #6EE3E1;
+  --turquesaIFHT-pressed: #54AEAC;
+
+  --roxoIFHT: #523EB7;
+  --roxoIFHT-over: #553BD8;
+  --roxoIFHT-pressed: #46359D;
+
+  --violetaIFHT: #8944BA;
+  --violetaIFHT-over: #9B4DD2;
+  --violetaIFHT-pressed: #773BA2;
+  
+  --laranjaIFHT: #FF8939;
+  --laranjaIFHT-over: #FF964F;
+  --laranjaIFHT-pressed: #D77430;
+
+  --amareloIFHT: #F1C14D;
+  --amareloIFHT-over: #F1B523;
+  --amareloIFHT-pressed: #E5A914; 
+
+  /*Tons de Cinza*/      
+
+  --pretoIFHT: #0A151F;
+  --Cinza1: #636972;
+  --Cinza2: #959BA3;
+  --Cinza3: #B6BAC1;
+  --Cinza4: #ECF4FC;   
+}
+
+/* -------------------------------- 
+
+Configurando a página - tamanho, margens, impressão de fundos etc.
+
+-------------------------------- */
+
+@page {
+	size: A4 portrait;
+	margin: 2cm;
+}
+
+@page:first {
+	content: "This page is intentionally left blank."
+}
+
+body {	
+
+	/*Para forçar os navegadores a imprimirem cores e imagens de fundo, use os códigos abaixo:*/
+	-webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+  color-adjust: exact !important;                 /*Firefox*/
+
+  font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
+  font-size:10pt;
+}
+
+.blocos {margin-top:0.5cm;}
+
+.row {
+  margin-top:0.5cm;
+}
+
+div.capa { 
+  page: cover; 
+  width: 94%;
+  height: 94%;
+  page-break-inside: avoid; 
+}
+
+/*1-Biodiversidade*/
+#biodiversidade1.capa {content: url("../_img-geral/capas-PDFS/Biodiversidade-Unidade-I-Capa.jpg");}
+#biodiversidade2.capa {content: url("../_img-geral/capas-PDFS/Biodiversidade-Unidade-II-Capa.jpg");}
+#biodiversidade3.capa {content: url("../_img-geral/capas-PDFS/Biodiversidade-Unidade-III-Capa.jpg");}
+#biodiversidade4.capa {content: url("../_img-geral/capas-PDFS/Biodiversidade-Unidade-IV-Capa.jpg");}
+
+/*2-GPA*/
+#gpa1.capa {content: url("../_img-geral/capas-PDFS/GPA-Unidade-I-Capa.jpg");}
+#gpa2.capa {content: url("../_img-geral/capas-PDFS/GPA-Unidade-II-Capa.jpg");}
+#gpa3.capa {content: url("../_img-geral/capas-PDFS/GPA-Unidade-III-Capa.jpg");}
+#gpa4.capa {content: url("../_img-geral/capas-PDFS/GPA-Unidade-IV-Capa.jpg");}
+
+/*3-Licenciamento*/
+#lic1.capa {content: url("../_img-geral/capas-PDFS/LIC-Unidade-I-Capa.jpg");}
+#lic2.capa {content: url("../_img-geral/capas-PDFS/LIC-Unidade-II-Capa.jpg");}
+#lic3.capa {content: url("../_img-geral/capas-PDFS/LIC-Unidade-III-Capa.jpg");}
+#lic4.capa {content: url("../_img-geral/capas-PDFS/LIC-Unidade-IV-Capa.jpg");}
+
+/*4-Pós-Licença e Fiscalização*/
+#pfi1.capa {content: url("../_img-geral/capas-PDFS/pfi-Unidade-I-Capa.jpg");}
+#pfi2.capa {content: url("../_img-geral/capas-PDFS/pfi-Unidade-II-Capa.jpg");}
+#pfi3.capa {content: url("../_img-geral/capas-PDFS/pfi-Unidade-III-Capa.jpg");}
+#pfi4.capa {content: url("../_img-geral/capas-PDFS/pfi-Unidade-IV-Capa.jpg");}
+
+/*5 -Métodos e Técnicas de Pesquisa Científica*/
+#mtp1.capa {content: url("../_img-geral/capas-PDFS/mtp-Unidade-I-Capa.jpg");}
+#mtp2.capa {content: url("../_img-geral/capas-PDFS/mtp-Unidade-II-Capa.jpg");}
+#mtp3.capa {content: url("../_img-geral/capas-PDFS/mtp-Unidade-III-Capa.jpg");}
+#mtp4.capa {content: url("../_img-geral/capas-PDFS/mtp-Unidade-IV-Capa.jpg");}
+
+/*6 -Ecologia da Paisagem*/
+#disciplina101-1.capa {content: url("../_img-geral/capas-PDFS/disciplina101-Unidade-I-Capa.jpg");}
+#disciplina101-2.capa {content: url("../_img-geral/capas-PDFS/disciplina101-Unidade-II-Capa.jpg");}
+
+/*7 -Prevenção e Controle da Poluição Acidental*/
+#disciplina201-1.capa {content: url("../_img-geral/capas-PDFS/disciplina201-Unidade-I-Capa.jpg");}
+#disciplina201-2.capa {content: url("../_img-geral/capas-PDFS/disciplina201-Unidade-II-Capa.jpg");}
+
+/*8 - Política Nacional de Recursos Hídricos*/
+#disciplina301-1.capa {content: url("../_img-geral/capas-PDFS/disciplina301-Unidade-I-Capa.jpg");}
+#disciplina301-2.capa {content: url("../_img-geral/capas-PDFS/disciplina301-Unidade-II-Capa.jpg");}
+
+/*9 - Gestão da Qualidade Ambiental*/
+#disciplina401-1.capa {content: url("../_img-geral/capas-PDFS/disciplina401-Unidade-I-Capa.jpg");}
+#disciplina401-2.capa {content: url("../_img-geral/capas-PDFS/disciplina401-Unidade-II-Capa.jpg");}
+
+/*10 - Economia Ambiental*/
+#disciplina102-1.capa {content: url("../_img-geral/capas-PDFS/disciplina102-Unidade-I-Capa.jpg");}
+#disciplina102-2.capa {content: url("../_img-geral/capas-PDFS/disciplina102-Unidade-II-Capa.jpg");}
+
+/*11 - Planejamento e Gestão de Riscos*/
+#disciplina202-1.capa {content: url("../_img-geral/capas-PDFS/disciplina202-Unidade-I-Capa.jpg");}
+#disciplina202-2.capa {content: url("../_img-geral/capas-PDFS/disciplina202-Unidade-II-Capa.jpg");}
+
+/*12 - Segurança Hídrica*/
+#disciplina302-1.capa {content: url("../_img-geral/capas-PDFS/disciplina302-Unidade-I-Capa.jpg");}
+#disciplina302-2.capa {content: url("../_img-geral/capas-PDFS/disciplina302-Unidade-II-Capa.jpg");}
+
+/*13 - Prevenção e Controle da Poulição Ambiental*/
+#disciplina402-1.capa {content: url("../_img-geral/capas-PDFS/disciplina402-Unidade-I-Capa.jpg");}
+#disciplina402-2.capa {content: url("../_img-geral/capas-PDFS/disciplina402-Unidade-II-Capa.jpg");}
+
+main {
+	z-index:3;
+	position: relative;
+}
+
+header.print {
+    position: fixed; /* Display only on print page (each) */
+    top: 0; /* Because it's header */
+    color:red!important;
+    background:yellow !important;
+    width: 100%;
+    height:2cm;
+    display: block;
+    opacity: 0.5;
+}
+
+footer.print{
+    position: fixed;
+    bottom: 0; /* Because it's footer */
+    content: url("../_img/barra-de-logos.png");
+    page: cover;
+    width: 100%;
+    display: block;
+    page-break-inside: avoid;
+}
+
+/*Colunas*/
+
+/*.col-xs-1, 
+.col-xs-2, 
+.col-xs-3, 
+.col-xs-4, 
+.col-xs-5, 
+.col-xs-6, 
+.col-xs-7, 
+.col-xs-8, 
+.col-xs-9, 
+.col-xs-10, 
+.col-xs-11, 
+.col-xs-12 {float: left;}*/
+
+.col-xs-1 {width:8.33333%}
+.col-xs-2 {width:16.66667%}
+.col-xs-3 { width:25%}
+.col-xs-4 {width:33.33333%}
+.col-xs-5 {width:41.66667%}
+.col-xs-6 {width:50%}
+.col-xs-7 {width:58.33333%}
+.col-xs-8 {width:66.66667%}
+.col-xs-9 {width:75%}
+.col-xs-10 {width:83.33333%}
+.col-xs-11 {width:91.66667%}
+.col-xs-12 {width:100%}
+
+.col-md-1, 
+.col-md-2, 
+.col-md-3, 
+.col-md-4, 
+.col-md-5, 
+.col-md-6, 
+.col-md-7, 
+.col-md-8, 
+.col-md-9, 
+.col-md-10, 
+.col-md-11 {float: left;}
+
+.col-md-12 {width: 100%;}
+.col-md-11 {width: 91.66666667%;}
+.col-md-10 {width: 83.33333333%;}
+.col-md-9 {width: 75%;}
+.col-md-8 {width: 66.66666667%;}
+.col-md-7 {width: 58.33333333%;}
+.col-md-6 {width: 50%;}
+.col-md-5 {width: 41.66666667%;}
+.col-md-4 {width: 33.33333333%;}
+.col-md-3 {width: 25%;}
+.col-md-2 {width: 16.66666667%;}
+.col-md-1 {width: 8.33333333%;}
+
+.col-md-offset-12 {margin-left: 100%;}
+.col-md-offset-11 {margin-left: 91.6667%;}
+.col-md-offset-10 {margin-left: 83.3333%;}
+.col-md-offset-9 {margin-left: 75%;}
+.col-md-offset-8 {margin-left: 66.6667%;}
+.col-md-offset-7 {margin-left: 58.3333%;}
+.col-md-offset-6 {margin-left: 50%;}
+.col-md-offset-5 {margin-left: 41.6667%;}
+.col-md-offset-4 {margin-left: 33.3333%;}
+.col-md-offset-3 {margin-left: 20%;}
+.col-md-offset-2 {margin-left: 16.6667%;}
+.col-md-offset-1 {margin-left: 8.33333%;}
+.col-md-offset-0 {margin-left: 0;}
+
+/*
+ .col-lg-1, 
+ .col-lg-2, 
+ .col-lg-3, 
+ .col-lg-4, 
+ .col-lg-5, 
+ .col-lg-6, 
+ .col-lg-7, 
+ .col-lg-8, 
+ .col-lg-9, 
+ .col-lg-10, 
+ .col-lg-11, 
+ .col-lg-12 {float: left;}
+
+ .col-lg-1 {width:8.33333%}
+ .col-lg-2 {width:16.66667%}
+ .col-lg-3 {width:25%}
+ .col-lg-4 {width:33.33333%}
+ .col-lg-5 {width:41.66667%}
+ .col-lg-6 {width:50%}
+ .col-lg-7 {width:58.33333%}
+ .col-lg-8 {width:66.66667%}
+ .col-lg-9 {width:75%}
+ .col-lg-10 {width:83.33333%}
+ .col-lg-11 {width:91.66667%}
+ .col-lg-12 {width:100%}
+
+.col-lg-offset-12 {margin-left: 100%;}
+.col-lg-offset-11 {margin-left: 91.6667%;}
+.col-lg-offset-10 {margin-left: 83.3333%;}
+.col-lg-offset-9 {margin-left: 75%;}
+.col-lg-offset-8 {margin-left: 66.6667%;}
+.col-lg-offset-7 {margin-left: 58.3333%;}
+.col-lg-offset-6 {margin-left: 50%;}
+.col-lg-offset-5 {margin-left: 41.6667%;}
+.col-lg-offset-4 {margin-left: 33.3333%;}
+.col-lg-offset-3 {margin-left: 25%;}
+.col-lg-offset-2 {margin-left: 16.6667%;}
+.col-lg-offset-1 {margin-left: 8.33333%;}
+.col-lg-offset-0 {margin-left: 0;}*/
+
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, 
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, 
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, 
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, 
+.col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left:0.5cm;
+    padding-right:0.5cm;
+}
+
+/* -------------------------------- 
+
+Configurando os elementos que devem ou não aparecer na impressão
+
+-------------------------------- */
+
+.print {display:block !important;}
+
+.no-print {display:none !important;}
+
+
+/* -------------------------------- 
+
+Configurando os títulos e subtítulos
+
+-------------------------------- */
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Raleway', sans-serif;
+	line-height:normal;
+  clear: both;
+  margin-bottom: 0.2cm;
+}
+
+h1 {font-size:30pt;}
+h2 {font-size:20pt;}
+h3 {font-size:16pt;}
+h4 {font-size:12pt;}
+h5 {font-size:10pt;}
+
+h1 {page-break-before: always;}
+h2,h3,h4,h5 {page-break-after: avoid;}
+h3,h4,h5 {page-break-before: avoid;}
+
+.cap {margin-top: 0.2cm;}
+
+.subcap {font-style: italic;}
+
+.antetitulo {
+	font-style: italic;
+	margin: 0;
+	font-weight: 500;
+	page-break-before: always;
+}
+
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+/* -------------------------------- 
+
+Configurando os parágrafos
+
+-------------------------------- */
+
+p {
+	clear: both;
+	font-family: 'Roboto', sans-serif;
+	font-size:10pt;
+	line-height: 14.2pt;
+	margin: 0.15cm 0.15cm 0.3cm;
+	page-break-inside: avoid; /*Garante que o conteúdo não quebre entre uma página e outra na hora de imprimir*/
+	text-align: justify;
+	widows: 3;
+
+
+}
+
+p a {word-wrap: break-word;}
+
+.legenda, .fonte {
+	font-size:8pt;
+	margin:0;
+	text-align: center;
+}
+
+.legenda {font-weight: 700;}
+
+.fonte {
+  font-style: italic;
+  margin-bottom: 0.8cm;
+}
+
+
+.pull-right {float: right !important;}
+
+.pull-left {float: left !important;}
+
+
+/* -------------------------------- 
+
+Configurando links
+
+-------------------------------- */
+
+a, a:visited {
+  text-decoration: underline;
+}
+
+/*Exibindo a URL dos links externos (o endereço aparece após o texto do link)*/
+
+a[href*='//']:after {
+  content:" (" attr(href) ") ";
+  font-size: 8pt;
+}
+
+/* Para exibir também os links internos (ex:javascripts, imagens etc), deve-se comentar o código acima e utilizar o código abaixo: 
+a:link:after, a:visited:after {content: " (" attr(href) ") ";}*/
+
+
+/* -------------------------------- 
+
+Configurando imagens & tabelas
+-------------------------------- */
+
+/*Garantindo que todas as imagens caibam na largura da página*/
+img {max-width: 12.5cm;}
+
+/*Garantindo que elementos e tabelas não sejam quebradas nas páginas:*/
+img, table {
+	display: block;
+    page-break-inside: avoid;
+    position: relative;
+}
+
+.center-block {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.img-responsive {
+    max-width: 100%;
+    /*width: 12.5cm;*/
+    height: auto;
+}
+
+.img-rounded {
+  border-radius: 6px;
+}
+
+.questionamento .img-responsive {max-width: 12.5cm;}
+
+/* Alinhamento das imagens
+--------------------------------*/
+
+.destaque-img {
+  margin-bottom: 1cm;
+}
+
+.destaque-img-right,
+.destaque-img-left {page-break-inside: avoid;}
+
+.destaque-img-right,
+.destaque-img-left,
+.destaque-img-txt {margin-bottom: 0.8cm;}
+
+.destaque-img .citacao {
+  float:none;
+  margin:0 auto;
+}
+
+.img-vertical {
+  max-width: 7cm;
+  margin-bottom: 0.8cm;
+}
+
+.img-vertical-pagina {
+  max-width: 28cm;
+  page-break-inside: avoid;
+}
+
+/* Imagens e vídeos que são colocados entre colunas 
+(tira o float das colunas)
+--------------------------------*/
+.imagem,
+.video {float: none;}
+
+
+/* -------------------------------- 
+
+Accordion
+
+-------------------------------- */
+
+.accordion {margin:0.5cm 0;}
+
+.accordion .panel-heading {
+    border-bottom: 1pt solid var(--azulIFHT);
+    color: #fff;
+}
+
+.accordion .panel-heading a, 
+.accordion .panel-heading a:visited {
+  color: #fff!important; 
+  text-decoration: underline;
+}
+
+.accordion .panel-heading .fa {color:var(--brancoIFHT) !important;}
+
+.accordion .panel-heading h5 {
+	margin:0;
+	padding:0.15cm;
+  font-size: 10pt;
+}
+
+.accordion .panel-heading h5 .fa,
+.accordion .panel-heading h5 .fas {display:none;}
+
+.accordion .panel {
+	border: 1pt solid #00A0DD/*var(--azulIFHT)*/;
+	margin-bottom:0.5cm;
+	page-break-inside: avoid;
+}
+
+.accordion .panel-body {padding: 0.15cm 0.5cm;}
+
+.accordion .atencao,
+.accordion .material-complementar,
+.accordion .para-refletir,
+.accordion .saiba-mais {float:none;}
+
+
+/* -------------------------------- 
+
+Antes e Depois
+
+-------------------------------- */
+.antes-e-depois {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  float:none;
+}
+
+.antes-e-depois img {max-width: 10cm;}
+
+
+
+/* -------------------------------- 
+
+Boxes Simples
+-------------------------------- */
+
+.box-simples {
+  break-inside: avoid;
+  position: relative;
+  margin: 1cm auto;
+  float: none;
+}
+
+.box-simples p  {text-align: left;}
+
+.box-simples .text-center {text-align: center;}
+
+.box-quote.multi-border {
+  padding: 0.5cm;
+}
+
+.box-quote {
+  background: var(--white-color);
+  box-shadow: 0.12cm 0.09cm 0.12cm rgba(0,0,0, 0.2);
+  border-radius: 0.3cm;
+  margin-bottom: 2cm;
+  border: 1pt solid #e8eaec;
+  position: relative;
+  top: 0.5cm;
+  page-break-inside: avoid;
+  height: auto;
+  min-width: 1cm;
+}
+
+.box-quote h3 {
+  color:var(--azulIFHT-pressed) !important;
+  border-bottom: 1px solid var(--azulIFHT-pressed) !important;
+  margin: 10px 0 15px;
+  padding-bottom: 10px;
+}
+
+.box-quote h3 strong, 
+.box-quote h3 em {color:var(--azulIFHT-pressed) !important;}
+
+.box-quote p.legenda {font-size: 8pt;}
+
+.box-quote p.circle {color: #fff !important;}
+
+
+.box-quote h4,
+.box-quote h5   {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.2cm;
+}
+
+.box-quote ul li {
+  font-style: italic;
+  list-style: circle;
+}
+
+.box-quote ul li i {margin-right:10px;}
+
+.box-quote .fa {
+    color: var(--main-color3);
+    font-size:16px;
+}
+
+.box-quote ol {margin-left: 0.5cm;}
+
+.box-quote .fa-quote-left, .box-quote .fa-question-circle-o,  .box-quote .fa-pagelines  {margin-right:10px;}
+
+.box-quote .fa-quote-right{margin-left:10px;}
+
+.box-quote .fa-question-circle-o, .box-quote .fa-pagelines {font-size:35px;}
+
+.box-quote .quote-autor {
+    font-size:10pt;
+    font-style: italic;
+    margin-bottom: 0 !important;
+}
+
+.box-quote i, .box-quote  .svg-inline--fa {color: var(--azulIFHT);}
+
+.box-quote i {font-size:20px;}
+
+.box-quote.destaque h3 a::after {font-size: 7pt;}
+
+.box-quote.destaque  p {
+    font-size: 1.3em;
+    color: 
+    #636972 !important;
+    line-height: 1.5em;
+}
+
+.box-quote .obj-lista .list-group-item {
+  border:none;
+  box-shadow: none;
+}
+
+.box-quote .obj-lista ul .list-group-item,
+.box-quote .obj-lista ol .list-group-item {padding:0 0 0.2cm 0.5cm;}
+
+.box-quote .quote-author.pull-right,
+.box-quote .quote-author.pull-left {float:none !important;}
+
+.box-quote .quote-author.pull-right {text-align: right;}
+.box-quote .quote-author.pull-left {text-align:left;}
+
+/* -------------------------------- 
+
+Boxes de Citação
+
+-------------------------------- */
+
+.citacao {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    position: relative;
+    margin:1cm auto;
+    float:none;
+}
+
+.citacao .fonte {margin-bottom: 0;}
+
+.citacao .quote-author {
+  float: none !important;
+  text-align: right;
+}
+
+.citacao .box-quote::before,
+.citacao .box-quote::after {
+  display: block;
+  position: absolute;
+  width: 1.5cm;
+}
+
+.citacao .box-quote::before {
+  content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-open.svg);
+  top: -1.5rem;
+  left: -0.3cm;
+}
+
+.citacao .box-quote::after {
+  content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-close.svg);
+  right:-0.3cm;
+  bottom:-1cm;
+}
+
+/*.citacao .box-quote::before, 
+.citacao .box-quote::after {
+    display: block;
+    width: 1.5cm;
+    position: absolute;
+    top: -20px;
+    left: -18px;
+}
+
+.citacao .box-quote::before {content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-open.svg);}
+
+.citacao .box-quote::after {
+  top: auto;
+  left: 100%;
+  position: absolute;
+  content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-close.svg);
+  margin-top: 0;
+  margin-left: -1cm;
+}*/
+
+
+
+/*Boxes de atenção, material complementar, para refletir e saiba mais:*/
+
+.atencao .box-quote.multi-border,
+.material-complementar .box-quote.multi-border,
+.para-refletir .box-quote.multi-border,
+.saiba-mais .box-quote.multi-border {
+  padding-right: 0.7cm;
+  /*padding-bottom: 3.5cm;*/
+  padding-bottom: 0;
+}
+
+.atencao .box-quote,
+.material-complementar .box-quote,
+.para-refletir .box-quote,
+.saiba-mais .box-quote {
+  /*padding:0;*/
+  margin-bottom: 0;
+  border: none;
+  margin:1em 0;
+}
+
+.atencao .box-quote ul,
+.material-complementar .box-quote ul,
+.para-refletir .box-quote ul,
+.saiba-mais .box-quote ul {padding:0;}
+
+.atencao .box-quote ul li,
+.material-complementar .box-quote ul li,
+.para-refletir .box-quote ul li,
+.saiba-mais .box-quote ul li {
+  list-style: none;
+  margin-bottom: 0.2cm;
+}
+
+
+.atencao .box-quote.destaque,
+.material-complementar .box-quote.destaque,
+.para-refletir .box-quote.destaque,
+.saiba-mais .box-quote.destaque {
+  padding:0.1em 1em;
+  border-width: 1pt;
+}
+
+.atencao .box-quote.destaque p,
+.material-complementar .box-quote.destaque p,
+.para-refletir .box-quote.destaque p,
+.saiba-mais .box-quote.destaque p {
+    font-size: 1.3em;
+    color: #636972 !important;
+    line-height: 1.5em;
+    margin: 0
+}
+
+
+.atencao .box-quote h3 {
+  border-bottom: 1pt solid var(--laranjaIFHT) !important;
+  margin-top:1.5cm;
+}
+
+.atencao .box-quote h3 a::after,
+.material-complementar .box-quote h3 a::after,
+.para-refletir .box-quote h3 a::after,
+.saiba-mais .box-quote h3 a::after {font-size: 7pt;}
+
+
+.atencao .box-quote h3 strong a[href*='//']:after {
+  content:" (" attr(href) " + "\A") ";
+}
+
+
+.atencao .box-quote.destaque.multi-border,
+.material-complementar .box-quote.destaque.multi-border,
+.para-refletir .box-quote.destaque.multi-border,
+.saiba-mais .box-quote.destaque.multi-border,
+
+.atencao .box-quote.destaque.multi-border::before,
+.atencao .box-quote.destaque.multi-border::after,
+.material-complementar .box-quote.destaque.multi-border::before,
+.material-complementar .box-quote.destaque.multi-border::after,
+.para-refletir .box-quote.destaque.multi-border::before,
+.para-refletir .box-quote.destaque.multi-border::after,
+.saiba-mais .box-quote.destaque.multi-border::before,
+.saiba-mais .box-quote.destaque.multi-border::after {
+  border:none;
+  box-shadow: none;
+  background:transparent;
+}
+
+.atencao,
+.material-complementar,
+.para-refletir,
+.saiba-mais  {
+	page-break-inside: avoid; /*Garante que o conteúdo não quebre entre uma página e outra na hora de imprimir*/
+	break-inside:avoid;
+	position: relative;
+  float: none;
+  margin-bottom: 1.5cm;
+}
+
+.atencao iframe,
+.material-complementar iframe,
+.para-refletir iframe,
+.saiba-mais iframe {
+	max-width: 70%;
+	margin: 0.2cm 1.8cm;
+	height: 100%;
+}
+
+.atencao h5,
+.material-complementar h5,
+.para-refletir h5,
+.saiba-mais h5 {
+	border-style:solid;
+	border-width: 0 0 1pt;
+  font-size: 18pt;
+  margin-bottom: 0;
+  margin-top: 0.5cm;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  page-break-inside: avoid;
+  position: relative;
+  top: -2.5cm;
+  margin-left: 0.5cm;
+}
+
+.atencao h5::before,
+.material-complementar h5::before,
+.para-refletir h5::before,
+.saiba-mais h5::before {
+	display: block;
+	width: 60px;
+  position: relative;
+  top: 0.5cm;
+  left: -1.8cm;
+  page-break-inside: avoid;
+}
+
+.atencao .multi-border,
+.material-complementar .multi-border,
+.para-refletir .multi-border,
+.saiba-mais .multi-border  {
+position: relative;
+top:0.5cm;
+border-style: solid;
+border-width: 6pt 1pt 1pt;
+border-radius: 0.15cm;
+}
+
+.atencao .saiba-mais-content,
+.material-complementar .saiba-mais-content,
+.para-refletir .saiba-mais-content,
+.saiba-mais .saiba-mais-content {
+	position:relative;
+	top:-2cm;
+}
+
+.atencao .saiba-mais-content .lista, 
+.material-complementar .saiba-mais-content .lista, 
+.para-refletir .saiba-mais-content .lista, 
+.saiba-mais .saiba-mais-content .lista {float:none;}
+
+.atencao .citacao .box-quote,
+.material-complementar .citacao .box-quote,
+.para-refletir .citacao .box-quote,
+.saiba-mais .citacao .box-quote {
+    background: transparent;
+    box-shadow: none;
+    margin:1em 0;
+    padding: 0.5cm 1cm;
+}
+
+.atencao .citacao .box-quote::after,
+.material-complementar.citacao .box-quote::after,
+.para-refletir .citacao .box-quote::after,
+.saiba-mais .citacao .box-quote::after {margin-top: -1cm;}
+
+.atencao .citacao .box-quote.multi-border,
+.material-complementar .citacao .box-quote.multi-border,
+.para-refletir .citacao .box-quote.multi-border,
+.saiba-mais .citacao .box-quote.multi-border {
+    border: none;
+    position: relative;
+}
+
+.atencao .citacao .saiba-mais-content,
+.material-complementar .citacao .saiba-mais-content,
+.para-refletir .citacao .saiba-mais-content,
+.saiba-mais .citacao .saiba-mais-content {top:0cm;}
+
+.atencao .citacao .saiba-mais-content,
+.material-complementar .citacao .saiba-mais-content,
+.para-refletir .citacao .saiba-mais-content,
+.saiba-mais .citacao .saiba-mais-content {top:0cm;}   
+
+.atencao .citacao p.pull-right,
+.material-complementar .citacao p.pull-right,
+.para-refletir .citacao p.pull-right, 
+.saiba-mais .citacao p.pull-right {
+  float: none;
+  text-align: right;
+}     
+
+.atencao .citacao-longa,
+.material-complementar .citacao-longa,
+.para-refletir .citacao-longa,
+.saiba-mais .citacao-longa {
+  float:none;
+  margin:0;
+}
+
+.atencao .citacao-lg,
+.material-complementar .citacao-lg,
+.para-refletir .citacao-lg,
+.saiba-mais .citacao-lg {
+  width: 9cm;
+  margin-left: 0.5cm;
+}
+
+/*Atenção*/
+
+.atencao .multi-border {
+  border-color: var(--laranjaIFHT-pressed);
+}
+
+.atencao h5 {
+    color: var(--laranjaIFHT-pressed) !important;
+    border-bottom-width: 1pt;
+    border-bottom-color: var(--laranjaIFHT-pressed);
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+.atencao h5::before {content: url(../_img-geral/ic-atencao.svg) !important;}
+
+.atencao .obj-lista .list-group-item i {color: var(--laranjaIFHT) !important;}
+
+.atencao .citacao .box-quote::before {content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-open-atencao.svg);}
+
+.atencao .citacao .box-quote::after {content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-close-atencao.svg);}
+
+
+/*Material Complementar*/
+
+.material-complementar .multi-border  {border-color: #54AEAC;}
+
+.material-complementar h5 {
+    color: /*var(--turquesaIFHT-pressed)*/  #54AEAC !important;
+    border-color: : #54AEAC;   
+}
+
+.material-complementar h5::before {content: url(../_img-geral/ic-materialComplementar.svg) !important;}
+
+
+.material-complementar .obj-lista .list-group-item i {color: var(--turquesaIFHT-pressed) !important;}
+
+.material-complementar .citacao .box-quote::before {content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-open-material-complementar.svg);}
+
+.material-complementar .citacao .box-quote::after {content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-close-material-complementar.svg);}
+
+
+/*Para Refletir*/
+
+.para-refletir .multi-border  {border-color: var(--roxoIFHT);}
+
+.para-refletir h5 {
+    color: var(--roxoIFHT) !important;
+    border-color: : var(--roxoIFHT);   
+}
+
+.para-refletir h5::before {content: url(../_img-geral/ic-paraRefletir.svg) !important;}
+
+.para-refletir .obj-lista .list-group-item i {color: var(--roxoIFHT) !important;}
+
+.para-refletir .citacao .box-quote::before {content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-open-para-refletir.svg);}
+
+.para-refletir .citacao .box-quote::after {content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-close-para-refletir.svg);}
+
+
+/*Saiba Mais*/
+
+.saiba-mais .multi-border {border-color: var(--violetaIFHT);}
+
+.saiba-mais h5 {
+    color: var(--violetaIFHT-pressed) !important;
+    border-color: : var(--violetaIFHT-pressed);   
+}
+
+.saiba-mais h5::before {content: url(../_img-geral/ic-saibamais.svg) !important;}
+
+.saiba-mais .obj-lista .list-group-item i {color: var(--violetaIFHT) !important;}
+
+.saiba-mais .citacao .box-quote::before {content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-open-saiba-mais.svg);}
+
+.saiba-mais .citacao .box-quote::after {content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-close-saiba-mais.svg);}
+
+
+/* -------------------------------- 
+
+Card Box
+
+-------------------------------- */
+
+.card-box {
+  padding:0.5cm;
+  margin-bottom: 1cm;
+}
+
+.card-box  .box-quote {margin:0;}
+
+.card-box img {border-radius:0.25cm 0.25cm 0 0;}
+
+.card-box .card-body {margin-top: 0.25cm;}
+
+/* -------------------------------- 
+
+Citação Longa
+
+-------------------------------- */
+
+.citacao-longa {
+  float: none;
+  page-break-inside: avoid;
+}
+
+.citacao-longa p.pull-right,
+.citacao-longa p.pull-left {float: none!important;}
+
+.citacao-longa .lista {margin-bottom: 0.5cm;}
+
+.citacao-lg {
+	color: #636972;
+	font-size: 10pt;
+	margin: 30px auto;
+	width: 13cm;
+	font-style: italic;
+}
+
+.citacao-lg ul {list-style: disc;}
+
+.citacao-lg li {margin-bottom:20px;}
+
+.divider {
+  background: #0085ac;
+  display: block;
+  height: 3px;
+  margin: 20px auto;
+  width: 80px;
+}
+
+.divider .divider-bottom {margin-top:50px;}
+
+
+/* -------------------------------- 
+
+Flipcard
+
+-------------------------------- */
+
+.flipcard-front {
+  min-height: 2.5cm;
+}
+
+.flipcard-front h4 {
+  font-size: 12pt;
+  padding: 0.2cm;
+  background: var(--brancoIFHT-over);
+  position: relative;
+  top: 1cm;
+  margin: 0;
+}
+
+/*----------------------------- 
+
+Flipcard 2
+
+ -----------------------------*/
+
+.flipcard2 .content {
+  border: 1px solid var(--Cinza3);
+  margin: 0.3cm;
+  padding: 0.3cm 0.5cm 0.3cm 0.3cm;
+  border-radius: 0.3cm;
+  page-break-inside: avoid;
+}
+
+.flipcard2 .front h4 {
+  text-align:center;
+  margin-top: 0;
+}
+
+.flipcard2 .back .description {font-size:9pt;}
+
+.flipcard2 .back .description ul {padding-left:0.2cm;}
+
+.flipcard2 .back .description ul li {margin-bottom:0.2cm;}
+
+.flipcard2 p {
+  font-size: 9pt;
+  text-align: left;
+}
+
+
+/* -------------------------------- 
+
+Hover Boxes
+
+-------------------------------- */
+
+
+.hover-boxes .item-box-2 {
+  background: var(--brancoIFHT-over);
+  page-break-inside: avoid;
+  margin:0.8cm;
+}
+
+div[class*=item-box] {  
+  min-height: 350px;
+  border:1pt solid var(--brancoIFHT-pressed);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1cm;
+}
+
+.layer {margin-top: calc(25% - 1cm)}
+
+div[class*=item-box] h2 {
+  background:transparent;
+  border:none;
+  font-size: 16pt;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+}
+
+.hover-boxes .box-txt {text-align:center;}
+
+.hover-boxes h2 img {
+  background: var(--azulIFHT-pressed);
+  border-radius: 5cm;
+  width: 3cm;
+  height: 3cm;
+}
+
+
+
+/* -------------------------------- 
+
+Listas
+
+-------------------------------- */
+
+
+/*Lista Simples*/
+
+.lista {
+  position: relative;
+  float: none;
+  margin-bottom: 0.5cm;
+  width: 100%;
+  margin-left: 0;
+}
+
+.obj-lista ul li {
+    margin: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.obj-lista .list-group-item i {
+  font-size: 10pt;
+  padding-right: 0.05cm;
+  color: var(--azulIFHT) !important;
+  line-height: 0px;
+}
+
+.obj-lista .list-group-item i.icon-bullet, 
+.obj-lista .list-group-item .svg-inline--fa, 
+.obj-lista .list-group-item .fas  {
+  display: block;
+  width: 0.2cm;
+  height: 0.2cm;
+  float: none;
+  margin-right: 0.2cm;
+  margin-top: 0;
+  color: var(--azulIFHT);
+  left: -0.5cm;
+  position: relative;
+  top: 0.43cm;
+}
+
+
+/*Lista Ordenada*/
+
+.obj-lista {
+	font-family: 'Roboto', sans-serif;
+	font-size: 10pt;
+	margin-bottom: 30px;
+	width:auto;/*width: 13cm;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.obj-lista ol li.list-group-item, 
+.obj-lista ul li.list-group-item {list-style-type: none;}
+
+.obj-lista .list-group-item {
+  border-radius: 0cm;
+  margin-bottom: 0cm;
+  border: none;
+  padding: 0.2cm 0.5cm 0cm 1cm;
+  page-break-inside: avoid;
+}
+
+
+.obj-lista ol .list-group-item {padding: 0 0.5cm 0 1.5cm;}
+
+.obj-lista ol li {
+    counter-increment: my-awesome-counter;
+    margin: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.obj-lista ol li::before {
+    content: counter(my-awesome-counter, upper-roman);
+    background: var(--azulIFHT-over);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    color: var(--brancoIFHT);
+    text-align: center;
+    margin-right: 0.5rem;
+    display: block;
+    float: none;
+    left: -1cm;
+    position: relative;
+    top: 0.6cm;
+    }
+
+.list-group {padding-left: 0}
+
+
+/*Lista em Círculos*/
+
+.circle-obj .circle-img {
+  width: 4cm;
+  height: auto;
+  border-radius: 50%;
+  background: var(--brancoIFHT-pressed) !important;
+  text-align: center;
+  padding: 1.5cm 0;
+  margin: 0 auto;
+  -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+
+.circle-text {padding: 0 0.5cm;}
+
+.circle-content2 .svg-inline--fa,
+.circle-content2 i.fas,
+.circle-content2 i.far,
+.circle-content2 i.fa   {
+  color: #fff;
+  font-size: 30pt;
+ /* top: 10%;
+  position: relative;*/
+  vertical-align: middle;
+}
+
+
+.circle-obj {
+	position: relative;
+	width: 4cm;
+	height: 4cm;
+	margin: 0cm auto 1cm;
+	border-radius: 50%;
+	background: var(--brancoIFHT-pressed) !important;
+	-webkit-print-color-adjust: exact;
+  	color-adjust: exact;
+}
+
+.circle-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.circle-content::before {
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    width: 0;
+    height: 100%;
+}
+
+.circle-content h5 {
+    color: var(--marinhoIFHT) !important;
+    font-weight: 700;
+    margin: 15px 0 0 0;
+}
+
+.circle-content p {
+    font-size: 8pt;
+    line-height: normal;
+    margin-top: 0.1cm;
+    text-align: center;
+    widows:3;
+}
+
+.circle-content img {
+    display: inline-block;
+    width: 33%;
+    top: 0.6cm;
+}
+
+.circle-content .svg-inline--fa,
+.circle-content i.fas,
+.circle-content i.far,
+.circle-content i.fa   {
+  color: var(--brancoIFHT)!important;
+  font-size: 70px;
+  top: 10%;
+  position: relative;
+}
+
+.lista-circulos .row {
+	margin-bottom: 3cm;
+	page-break-inside: avoid;
+	display: flex;
+}
+
+.lista-circulos {
+  margin-bottom: 3cm;
+  page-break-inside: avoid;
+}
+
+
+.lista-circulos .col-xs-1, 
+.lista-circulos .col-xs-2, 
+.lista-circulos .col-xs-3, 
+.lista-circulos .col-xs-4, 
+.lista-circulos .col-xs-5, 
+.lista-circulos .col-xs-6, 
+.lista-circulos .col-xs-7, 
+.lista-circulos .col-xs-8, 
+.lista-circulos .col-xs-9, 
+.lista-circulos .col-xs-10, 
+.lista-circulos .col-xs-11, 
+.lista-circulos .col-xs-12,
+
+.lista-circulos .col-md-1, 
+.lista-circulos .col-md-2, 
+.lista-circulos .col-md-3, 
+.lista-circulos .col-md-4, 
+.lista-circulos .col-md-5, 
+.lista-circulos .col-md-6, 
+.lista-circulos .col-md-7, 
+.lista-circulos .col-md-8, 
+.lista-circulos .col-md-9, 
+.lista-circulos .col-md-10, 
+.lista-circulos .col-md-11, 
+.lista-circulos .col-md-12 {float: left;}
+
+/*Lista em círculos 2.0*/
+
+.circle-obj2 {
+  position: relative;
+  width: 4cm;
+  height: 4cm;
+  margin: 0cm auto 1cm;
+  border-radius: 50%;
+  background: var(--marinhoIFHT) !important;
+  -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+
+.circle-obj2 .circle-img  {
+    width: 2cm;
+    height: 2cm;
+    top: 1cm;
+    position: relative;
+    left: 1cm;
+}
+
+.circle-obj2 .circle-img i,
+.circle-obj2 .circle-img .fas, 
+.circle-obj2 .circle-img .far, 
+.circle-obj2 .circle-img .svg-inline--fa {
+  color:#fff !important;
+  -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.circle-obj2 .circle-img .fas::before,
+.circle-obj2 .circle-img .far::before,
+.circle-obj2 .circle-img .fa-bolt::before,
+.circle-obj2 .circle-img .fa-tree::before  {
+  color:#fff !important;
+  -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+
+.circle-obj2  .circle-text {
+  padding: 0 0.5cm;
+  margin-top: 2.3cm;
+}
+
+
+/* -------------------------------- 
+
+Meio Ambiente em Pauta
+
+-------------------------------- */
+
+.meio-ambiente {float: none;}
+
+
+/* -------------------------------- 
+
+Modal
+
+-------------------------------- */
+
+.modal {
+  width: 13cm;
+  margin: auto;
+  border: 1pt solid var(--Cinza3);
+  padding: 0.5cm;
+  page-break-inside: avoid;
+}
+
+.modal h4 {
+  margin: 0 0 1cm 0;
+  text-align: center;
+}
+
+
+/* -------------------------------- 
+
+Quadro de Comparação
+
+-------------------------------- */
+
+.row-comparacao {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.obj-comparacao {
+    page-break-inside: avoid;
+    /*width: 16cm;*/
+    margin: auto;
+    margin-bottom: 1cm;
+    overflow: hidden;
+}
+
+.obj-comparacao .item.item1, 
+.obj-comparacao .item.item2 {background: var(--brancoIFHT-over);}
+
+.obj-comparacao .item, .obj-comparacao .times {
+    display: table-cell;
+    vertical-align: middle;
+    /*width:2cm;*/
+}
+
+.obj-comparacao .item, .obj-comparacao .times p {text-align:center;}
+
+.obj-comparacao .times {
+    margin-top: 20%;
+}
+
+.obj-comparacao .item {
+	border-radius: 0.5cm;
+	color: #fff !important;
+	/*margin: 0.15cm;*/
+  height: auto;
+	min-height: 1.5cm;
+	padding-bottom: 0.5cm;
+  text-align: left;
+}
+
+.obj-comparacao .item h5, .obj-comparacao .item p  {
+	padding: 0.3cm;
+	margin: 0.2cm;
+}
+
+.obj-comparacao .item p {text-align: left;}
+
+
+/* -------------------------------- 
+
+Quadro Sequencial
+
+-------------------------------- */
+
+.obj-comparacao .arrow {
+  text-align: center;
+  height: 70px;
+  margin-top: 35px;
+}
+
+.obj-comparacao .arrow p {
+  text-align:center;
+}
+
+
+
+/* -------------------------------- 
+
+Table Responsive
+
+-------------------------------- */
+
+.tabela {float:none;}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.table {
+    margin-bottom: 0.3cm;
+    margin-top: 0.3cm;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-responsive {
+    display: block;
+    /*width: 13cm;*/
+    width: auto;
+    max-width: 18cm;
+    min-height: .01%;
+    overflow-x: auto;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.table td, .table-responsive td {
+	font-size: 9pt;
+	font-weight: 400;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {background: #f2fbfd !important;}
+
+.table > tbody > tr > td, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > td, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > thead > tr > th {
+	padding: 0.3cm;
+	line-height: 1.42;
+}
+
+.table-bordered > thead > tr > td, 
+.table-bordered > thead > tr > th {border-bottom-width: 2px;}
+
+.table-bordered > tbody > tr > td, 
+.table-bordered > tbody > tr > th, 
+.table-bordered > tfoot > tr > td, 
+.table-bordered > tfoot > tr > th, 
+.table-bordered > thead > tr > td, 
+.table-bordered > thead > tr > th {
+	border: 1px solid #ddd;
+	font-size: 9pt;
+}
+
+.table .fa-arrow-up, .table .fa-arrow-down {font-size:11pt;}
+
+.table > tbody > tr > td ul {
+  list-style: none;
+}
+
+.table > tbody > tr > td ul li {margin-bottom:0.5cm;}
+
+/*Tabela utilizando colunagem*/
+
+.tabela-colunagem .row {
+  page-break-inside: avoid;
+  margin: 0;
+  display: block;
+  min-height: 1cm;
+}
+
+.tabela-colunagem h5 {
+  margin-bottom:0.2cm;
+  margin-top: 0;
+}
+
+.tabela-colunagem h5,
+.tabela-colunagem p {
+  margin-left:0.2cm;
+  text-align: left;
+}
+
+.tabela-colunagem img {page-break-inside: avoid;}
+
+
+/* -------------------------------- 
+
+Vídeos
+
+-------------------------------- */
+
+ /*Para esconder os vídeos embedados*/
+.entry iframe, ins {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    line-height: 0pt !important;
+    white-space: nowrap;
+}
+.embed-youtube, .embed-responsive {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+}
+
+/*Caso queira que o thumb do vídeo apareça na impressão, comente o código acima e habilite o código abaixo:
+.video-bg {margin:0.5cm 0;}*/
+
+
+
+/* -------------------------------- 
+
+LINHA DO TEMPO
+
+-------------------------------- */
+
+#cd-timeline {
+  position: relative;
+  padding: 0;
+  margin-bottom: 2cm;
+}
+
+.cd-timeline-block {page-break-inside: avoid;}
+
+.cd-timeline-img {
+  position: relative;
+  top: 1cm;
+  left: 0.07cm;
+  width: 1cm;
+  height: 1cm;
+  border-radius: 50%;
+}
+
+.cd-timeline-img.cd-1 {background: #62CBC9;}
+.cd-timeline-img.cd-2 {background: #6e54dc;}
+.cd-timeline-img.cd-3 {background: #5fb7e4;}
+.cd-timeline-img.cd-4 {background: #9B4DD2;}
+.cd-timeline-img.cd-5 {background: #FF964F;}
+.cd-timeline-img.cd-6 {background: #f1cb6a;}
+
+.cd-timeline-content {
+  position: relative;
+  margin-left: 1.5cm;
+  background:var(--brancoIFHT);
+  border-radius: 0.3cm;
+  padding: 0.6cm 1cm;
+  border: 1pt solid #b6bac1;
+  page-break-inside: avoid;
+}
+
+.cd-timeline-content h4 {
+  margin:0.2cm 0cm 0.5cm;
+  font-size: 12pt
+}
+
+.cd-timeline-content h5 {
+  margin: 0.2cm 0cm;
+  font-size: 10pt;
+  font-weight: 500;
+}
+
+.cd-timeline-content p {margin-left:0cm;}
+
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 1cm;
+  left: -1cm;
+  height: 100%;
+  width: 4px;
+  background:#d7e4ed;
+}
+
+.cd-timeline-img .svg-inline--fa,
+.cd-timeline-img i  {
+  width: 100%;
+  font-size: 16pt;
+  top: 0.2cm;
+  position: relative;
+  color: var(--brancoIFHT) !important;
+  left: 0.3cm;
+}
+
+/**-----------------
+
+PARALLAX
+
+---------------------**/
+
+.parallax {
+  background-size: cover;
+  background-position:0px 0px;
+  page-break-inside: avoid;
+  margin-bottom: 1cm;
+  page-break-inside: avoid;
+  break-inside:avoid;
+  min-height: 8cm; 
+}
+
+.bg-image1, .bg-image2, .bg-image3 {
+  height:100%;
+  opacity:0.7;
+  position:relative;
+}
+
+.caption {
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  color: var(--pretoIFHT);
+  padding: 0.5cm;
+  font-size: 10pt;
+}
+
+.caption p {
+  color: var(--pretoIFHT);
+  opacity: 0.8;
+  text-align: left;
+}
+
+.caption span.quote-author {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.caption  ul {list-style: circle;}
+
+
+/* -------------------------------- 
+
+  THUMB ACCORDION
+
+-------------------------------- */
+
+.thumb-accordion-obj {display: inline-block;}
+
+.thumb-accordion {margin-bottom:1cm;}
+
+.thumb-accordion .panel-body {padding: 0 0.5cm 0 0;}
+
+.thumb-accordion .panel-body p,
+.thumb-accordion .panel-body ul,
+.thumb-accordion .panel-body ol {text-align: left;}
+
+
+.thumb-accordion .wrapper img {
+  border: 1px solid #ebebeb;
+  border-radius: 0.25cm;
+}
