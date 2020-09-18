@@ -1373,6 +1373,8 @@ Slider (Carrossel)
 
 .carousel-item .texto {min-height: 280px;}
 
+.carousel-indicators {bottom: -10px;}
+
 .carousel-indicators li {
   height:3px;
   border-bottom: none;
@@ -1386,6 +1388,14 @@ Slider (Carrossel)
     height: 3px;
     margin: 0 3px;
 }
+
+.carousel-indicators li.active {background-color: var(--azulIFHT);}
+.carousel-indicators li {background-color: var(--Cinza2);}
+
+.slider-somente-imagem .carousel-indicators li.active {background-color:#fff;}
+.slider-somente-imagem .carousel-indicators li {background-color: var(--Cinza1);}
+
+.carousel-control .svg-inline--fa {height: 100%; width: 50px;}
 
 /*Seta branca*/
 .carousel-control-next-icon.white-arrow{
@@ -1404,6 +1414,16 @@ Slider (Carrossel)
 
 .carousel-control-prev-icon.dark-arrow {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%230a151f' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.3,8l1.5-1.5L4.3,4l2.5-2.5L5.3,0l-4,4L5.3,8z'/%3e%3c/svg%3e");
+}
+
+/*Carrossel imagem vertical e texto (ajustes na margem do texto no desktop*/
+
+@media (min-width: 768px) {
+  .slider-imagem-vertical .texto {
+    padding-left:6rem !important;
+  }
+
+  .box-quote .slider-imagem-vertical {height:500px;}
 }
 
 /*Dentro do Box de Atenção, Saiba Mais, Material Complementar etc*/
@@ -1448,7 +1468,7 @@ Slider (Carrossel)
   width: 60px;
 }
 
-.atencao.slider a.carousel-control .svg-inline--fa {color:var(--main-color4);}
+.atencao.slider a.carousel-control .svg-inline--fa {color:var(--laranjaIFHT);}
 
 
 /*Inserido na página*/
@@ -2818,12 +2838,15 @@ body, html {
     /* Full height */
     height: 100%;
 
+    /*Min height on mobile devices*/
+    min-height: 900px;
+
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-color:red;
     margin-bottom:2rem;
 }
 
@@ -2868,6 +2891,11 @@ body, html {
 }
 
 @media (min-width: 768px) { 
+
+  .parallax {
+    /*Min width on tablets and desktop devices*/
+    min-height: 500px;
+  }
 
   .caption {
     top: 10%;
