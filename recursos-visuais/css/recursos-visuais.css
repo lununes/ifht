@@ -263,7 +263,7 @@ Antes e Depois
   margin-left: -22px;
   margin-top: -22px;
   border-radius: 50%;
-  background: var(--azulIFHT) url("../_img/cd-arrows.svg") no-repeat center center;
+  background: var(--azulIFHT) url("../img/cd-arrows.svg") no-repeat center center;
   cursor: move;
   box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   opacity: 0;
@@ -382,13 +382,13 @@ Box de Citação Curta
 }
 
 .citacao .box-quote::before {
-  content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-open.svg);
+  content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/img/ic-quote-open.svg);
   top: -1.5rem;
   left: 0;
 }
 
 .citacao .box-quote::after {
-  content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/_img/ic-quote-close.svg);
+  content: url(https://gai.ifht.net.br/pluginfile.php/6804/mod_folder/content/0/img/ic-quote-close.svg);
   right:0;
   bottom:-2rem;
 }
@@ -482,7 +482,7 @@ Box de Atenção
 .atencao h5::before {
   display: block;
   width: 75px;
-  content: url(../_img/ic-atencao.svg);
+  content: url(../img/ic-atencao.svg);
   position: absolute;
   top: -20px;
   left: -35px;
@@ -604,9 +604,9 @@ Box de Atenção
   border-radius: 0;
 }
 
-.atencao .citacao .box-quote::before {content: url(../_img/ic-quote-open-atencao.svg);}
+.atencao .citacao .box-quote::before {content: url(../img/ic-quote-open-atencao.svg);}
 
-.atencao .citacao .box-quote::after {content: url(../_img/ic-quote-close-atencao.svg);}
+.atencao .citacao .box-quote::after {content: url(../img/ic-quote-close-atencao.svg);}
 
 .atencao a:not([href]):not([tabindex]) {color: var(--brancoIFHT);}
 
@@ -701,7 +701,7 @@ Box de Dica
 .dica h5::before {
   display: block;
   width: 75px;
-  content: url(../_img/ic-dica.svg);
+  content: url(../img/ic-dica.svg);
   position: absolute;
   top: -35px;
   left: -35px;
@@ -760,9 +760,9 @@ Box de Dica
 
 .dica .box-quote p {font-style: normal;}
 
-.dica .citacao .box-quote::before {content: url(../_img/ic-quote-open-dica.svg);}
+.dica .citacao .box-quote::before {content: url(../img/ic-quote-open-dica.svg);}
 
-.dica .citacao .box-quote::after {content: url(../_img/ic-quote-close-dica.svg);}
+.dica .citacao .box-quote::after {content: url(../img/ic-quote-close-dica.svg);}
 
 .dica .box-quote h3 {border-bottom: 1px solid var(--amareloIFHT);}
 
@@ -829,7 +829,7 @@ Box de Glossário
 .glossario h5::before {
   display: block;
   width: 75px;
-  content: url(../_img/ic-glossario.svg);
+  content: url(../img/ic-glossario.svg);
   position: absolute;
   top: -20px;
   left: -35px;
@@ -887,9 +887,9 @@ Box de Glossário
 
 .glossario .box-quote p {font-style: normal;}
 
-.glossario .citacao .box-quote::before {content: url(../_img/ic-quote-open.svg);}
+.glossario .citacao .box-quote::before {content: url(../img/ic-quote-open.svg);}
 
-.glossario .citacao .box-quote::after {content: url(../_img/ic-quote-close.svg);}
+.glossario .citacao .box-quote::after {content: url(../img/ic-quote-close.svg);}
 
 .glossario .box-quote h3 {border-bottom: 1px solid var(--marinhoIFHT);}
 
@@ -937,7 +937,7 @@ Box de Material Complementar
 .material-complementar h5::before {
   display: block;
   width: 75px;
-  content: url(../_img/ic-materialComplementar.svg);
+  content: url(../img/ic-materialComplementar.svg);
   position: absolute;
   top: -20px;
   left: -35px;
@@ -995,9 +995,9 @@ Box de Material Complementar
 
 .material-complementar .box-quote p {font-style: normal;}
 
-.material-complementar .citacao .box-quote::before {content: url(../_img/ic-quote-open-material-complementar.svg);}
+.material-complementar .citacao .box-quote::before {content: url(../img/ic-quote-open-material-complementar.svg);}
 
-.material-complementar .citacao .box-quote::after {content: url(../_img/ic-quote-close-material-complementar.svg);}
+.material-complementar .citacao .box-quote::after {content: url(../img/ic-quote-close-material-complementar.svg);}
 
 .material-complementar .obj-lista .list-group-item i.icon-bullet, 
 .material-complementar .obj-lista .list-group-item .svg-inline--fa, 
@@ -1050,7 +1050,7 @@ Box de Para Refletir
 .para-refletir h5::before {
   display: block;
   width: 75px;
-  content: url(../_img/ic-paraRefletir.svg);
+  content: url(../img/ic-paraRefletir.svg);
   position: absolute;
   top: -20px;
   left: -35px;
@@ -1130,13 +1130,13 @@ Box de Para Refletir
   border-radius: 0;
 }
 
-.para-refletir .citacao .box-quote::before {content: url(../_img/ic-quote-open-para-refletir.svg);}
+.para-refletir .citacao .box-quote::before {content: url(../img/ic-quote-open-para-refletir.svg);}
 
 .para-refletir .citacao .box-quote::after {
   top: 80%;
   left: 95%;
   position: absolute;
-  content: url(../_img/ic-quote-close-para-refletir.svg);
+  content: url(../img/ic-quote-close-para-refletir.svg);
 }
 
 .para-refletir a:not([href]):not([tabindex]) {color: var(--white-color);}
@@ -1208,7 +1208,7 @@ Box de Saiba mais
 .saiba-mais h5::before {
   display: block;
   width: 75px;
-  content: url(../_img/ic-saibamais.svg);
+  content: url(../img/ic-saibamais.svg);
   position: absolute;
   top: -20px;
   left: -35px;
@@ -1645,13 +1645,13 @@ Flipcard-ANTIGO (remover depois)
   }
 }
 
-.item1 .flipcard-front {background:url(../_img-geral/bg-flipcard1.jpg);}
-.item2 .flipcard-front {background:url(../_img-geral/bg-flipcard2.jpg);}
-.item3 .flipcard-front {background:url(../_img-geral/bg-flipcard3.jpg);}
-.item4 .flipcard-front {background:url(../_img-geral/bg-flipcard4.jpg);}
-.item5 .flipcard-front {background:url(../_img-geral/bg-flipcard5.jpg);}
-.item6 .flipcard-front {background:url(../_img-geral/bg-flipcard6.jpg);}
-.item7 .flipcard-front {background:url(../_img-geral/bg-flipcard7.jpg);}
+.item1 .flipcard-front {background:url(../img-geral/bg-flipcard1.jpg);}
+.item2 .flipcard-front {background:url(../img-geral/bg-flipcard2.jpg);}
+.item3 .flipcard-front {background:url(../img-geral/bg-flipcard3.jpg);}
+.item4 .flipcard-front {background:url(../img-geral/bg-flipcard4.jpg);}
+.item5 .flipcard-front {background:url(../img-geral/bg-flipcard5.jpg);}
+.item6 .flipcard-front {background:url(../img-geral/bg-flipcard6.jpg);}
+.item7 .flipcard-front {background:url(../img-geral/bg-flipcard7.jpg);}
 
 
 /*----------------------------- 
@@ -1875,13 +1875,13 @@ Flipcard 2.0
 .flip-card .item7 .button:hover svg{fill: var(--laranjaIFHT-pressed);}
 
 /*Fundos para flipcard*/
-.flip-card .item1 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../_img/bg-flipcard1.jpg);} 
-.flip-card .item2 {background: linear-gradient(40deg,rgba(0,0,0,.3),rgba(255,255,255,.5)), url(../_img/bg-flipcard2.jpg);}
-.flip-card .item3 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../_img/bg-flipcard3.jpg);}
-.flip-card .item4 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../_img/bg-flipcard4.jpg);}
-.flip-card .item5 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../_img/bg-flipcard5.jpg);}
-.flip-card .item6 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../_img/bg-flipcard6.jpg);}
-.flip-card .item7 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../_img/bg-flipcard7.jpg);}
+.flip-card .item1 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../img/bg-flipcard1.jpg);} 
+.flip-card .item2 {background: linear-gradient(40deg,rgba(0,0,0,.3),rgba(255,255,255,.5)), url(../img/bg-flipcard2.jpg);}
+.flip-card .item3 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../img/bg-flipcard3.jpg);}
+.flip-card .item4 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../img/bg-flipcard4.jpg);}
+.flip-card .item5 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../img/bg-flipcard5.jpg);}
+.flip-card .item6 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../img/bg-flipcard6.jpg);}
+.flip-card .item7 {background: linear-gradient(40deg,rgba(0,0,0,.4),rgba(255,255,255,.5)), url(../img/bg-flipcard7.jpg);}
 
 @media (min-width: 992px){
 
@@ -2737,7 +2737,7 @@ Modal
 .modal.glossario h4::before {
   display: block;
   width: 75px;
-  content: url(../_img/ic-glossario.svg);
+  content: url(../img/ic-glossario.svg);
   position: absolute;
   top: -20px;
   left: -35px;
@@ -3095,25 +3095,25 @@ Slider 2
 .cd-slider .cd-half-block.image {height: 30vh;}
 
 .cd-slider li:first-of-type .image {
-  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/_img/desktop/unidade2/slide1.jpg);
+  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/img/desktop/unidade2/slide1.jpg);
 }
 .cd-slider li:nth-of-type(2) .image {
-  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/_img/desktop/unidade2/slide2.jpg);
+  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/img/desktop/unidade2/slide2.jpg);
 }
 .cd-slider li:nth-of-type(3) .image {
-  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/_img/desktop/unidade2/slide3.jpg);
+  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/img/desktop/unidade2/slide3.jpg);
 }
 .cd-slider li:nth-of-type(4) .image {
-  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/_img/desktop/unidade2/slide4.jpg);
+  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/img/desktop/unidade2/slide4.jpg);
 }
 .cd-slider li:nth-of-type(5) .image {
-  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/_img/desktop/unidade2/slide5.jpg);
+  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/img/desktop/unidade2/slide5.jpg);
 }
 .cd-slider li:nth-of-type(6) .image {
-  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/_img/desktop/unidade2/slide6.jpg);
+  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/img/desktop/unidade2/slide6.jpg);
 }
 .cd-slider li:nth-of-type(7) .image {
-  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/_img/desktop/unidade2/slide7.jpg);
+  background-image: url(https://gai.ifht.net.br/pluginfile.php/6711/mod_folder/content/0/img/desktop/unidade2/slide7.jpg);
 }
 
 .cd-slider .image {background-size: cover;}
@@ -3608,7 +3608,7 @@ Bootstrap para simular visualmente uma tabela)
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../_img/thumb-accordion.jpg");
+    background-image: url("../img/thumb-accordion.jpg");
     background-size: cover;
     background-color: transparent;
     background-blend-mode: screen;
@@ -7210,7 +7210,7 @@ mark {
   }
 }
 
-.cd-timeline__img {
+.cd-timeline_img {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -7227,15 +7227,15 @@ mark {
   background:var(--azulIFHT);
 }
 
-.cd-timeline__img h4 {color:#fff;}
+.cd-timeline_img h4 {color:#fff;}
 
-.cd-timeline__img img {
+.cd-timeline_img img {
   width: 24px;
   height: 24px
 }
 
 @media (min-width: 64rem) {
-  .cd-timeline__img {
+  .cd-timeline_img {
       width: 60px;
       height: 60px;
       -ms-flex-order: 1;
@@ -7244,22 +7244,22 @@ mark {
       will-change: transform
   }
 
-  .cd-timeline__block:nth-child(even) .cd-timeline__img {
+  .cd-timeline__block:nth-child(even) .cd-timeline_img {
       margin-right: calc(5% - 30px)
   }
 }
 
-.cd-timeline__img--picture {
+.cd-timeline_img--picture {
   background-color: hsl(111, 51%, 60%);
   background-color: var(--cd-color-4)
 }
 
-.cd-timeline__img--movie {
+.cd-timeline_img--movie {
   background-color: hsl(356, 53%, 49%);
   background-color: var(--cd-color-5)
 }
 
-.cd-timeline__img--location {
+.cd-timeline_img--location {
   background-color: hsl(47, 85%, 61%);
   background-color: var(--cd-color-6)
 }
@@ -7340,12 +7340,12 @@ mark {
 
 @media (min-width: 64rem) {
 
-  .cd-timeline__img--hidden,
+  .cd-timeline_img--hidden,
   .cd-timeline__content--hidden {
       visibility: hidden
   }
 
-  .cd-timeline__img--bounce-in {
+  .cd-timeline_img--bounce-in {
       -webkit-animation: cd-bounce-1 0.6s;
       animation: cd-bounce-1 0.6s
   }
