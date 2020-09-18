@@ -1895,7 +1895,7 @@
 
                                     <h5 class="title mt-5 mb-4 p-0 pb-1">Slider imagem vertical e texto:</h5>
 
-                                    <p>Assim como nos demais sliders com imagens, este precisa manter a mesma medida (largura e altura) em todos os ítens.
+                                    <p>Este slider possui uma altura fixa no desktop. As imagens precisam ter as mesmas medidas. Já o texto, será scrollado.</p>
 
                                     <p><strong>Obs: No mobile, ele aparece semelhante ao slider citado acima.</strong></p>
 
@@ -1910,18 +1910,23 @@
                                                     <li data-target="#carousel4" data-slide-to="2"></li>
                                                 </ol>
 
-                                                <div class="carousel-inner">
+                                                <div class="carousel-inner h-100">
                                                 <!-- Ítem 1 -->
-                                                <article class="carousel-item active">
-                                                    <div class="row justify-content-center m-0">
-                                                        <div class="col-12 col-md-6 col-lg-7 order-2 order-lg-1 p-5 texto">
+                                                <article class="carousel-item active h-100">
+                                                    <div class="row justify-content-center m-0 h-100 bg-marinho3 text-white">
+                                                        <div class="col-12 col-md-6 col-lg-7 order-2 order-lg-1 p-5 p-lg-4 texto">
+
+                                                            <h4 class="title my-4 p-0 pb-1">Hora de Pensar!</h4>
+
                                                             <p>Este texto está alinhado pelo centro. A classe que configura isso é a <strong>align-items-center</strong>. Basta adicioná-la.</p>
                                         
+                                                            <p>A primeira iniciativa de fomento para abertura de dados governamentais se deu a partir do <a href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/dsn/dsn13117.htm" target="_blank">Plano de Ação Nacional sobre Governo Aberto</a> (Decreto s/nº de 15 de setembro de 2011), criado para incremento da transparência e do acesso à informação pública. As medidas estavam respaldadas na Constituição Federal, a qual estabelece que a administração pública tem a responsabilidade de fazer a gestão da documentação governamental e viabilizar o acesso dos usuários a registros administrativos e a informações sobre atos de governo.</p>
+
                                                             <p>A primeira iniciativa de fomento para abertura de dados governamentais se deu a partir do <a href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/dsn/dsn13117.htm" target="_blank">Plano de Ação Nacional sobre Governo Aberto</a> (Decreto s/nº de 15 de setembro de 2011), criado para incremento da transparência e do acesso à informação pública. As medidas estavam respaldadas na Constituição Federal, a qual estabelece que a administração pública tem a responsabilidade de fazer a gestão da documentação governamental e viabilizar o acesso dos usuários a registros administrativos e a informações sobre atos de governo.</p>
                                                         </div>
                                     
                                                         <div class="col-12 col-md-6 col-lg-5 order-1 order-lg-2 p-0">
-                                                            <img class="img-fluid rounded-right mx-auto d-none d-md-block" src="img/img.jpg" alt="" title="Fonte: Nome do autor / Nome do Banco de Imagens">
+                                                            <img class="img-fluid rounded-right mx-auto d-none d-md-block" src="img/img-vertical-slider.jpg" alt="" title="Fonte: Nome do autor / Nome do Banco de Imagens">
                                                             <img class="img-fluid rounded-top d-block d-md-none" src="img/img-mobile.jpg" alt="Descreva a imagem. Até 125 caracteres" title="Fonte: nome do Autor / Nome do Banco de Imagens">
                                                         </div>
                                                     </div>
@@ -1929,42 +1934,56 @@
 
                                                 <!-- Ítem 2 -->
                                                 <article class="carousel-item">
-                                                    <div class="row justify-content-center m-0">
-                                                    <div class="col-12 col-md-10 px-5">
-                                                        <p>O movimento de abertura ganha institucionalidade com a <a
-                                                            href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
-                                                            target="_blank">Lei de Acesso à Informação</a> (LAI - 12.527/2011), responsável pela
-                                                        criação de uma cultura de transparência no governo federal. Preconizou o direito
-                                                        constitucional de qualquer pessoa ter acesso à informação pública e a obrigação de dar
-                                                        publicidade sobre o recebimento e a destinação dos recursos públicos pelos três poderes da
-                                                        União; estados, Distrito Federal, municípios; tribunais de conta; Ministério Público; e
-                                                        entidades privadas sem fins lucrativos.</p>
-                                                    </div>
+                                                    <div class="row justify-content-center m-0 h-100 bg-marinho3 text-white">
+                                                        <div class="col-12 col-md-6 col-lg-7 order-2 order-lg-1 p-5 p-lg-4 texto">
+
+                                                            <h4 class="title my-4 p-0 pb-1">2020</h4>
+
+                                                            <p>O movimento de abertura ganha institucionalidade com a <a
+                                                                href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+                                                                target="_blank">Lei de Acesso à Informação</a> (LAI - 12.527/2011), responsável pela
+                                                            criação de uma cultura de transparência no governo federal. Preconizou o direito
+                                                            constitucional de qualquer pessoa ter acesso à informação pública e a obrigação de dar
+                                                            publicidade sobre o recebimento e a destinação dos recursos públicos pelos três poderes da
+                                                            União; estados, Distrito Federal, municípios; tribunais de conta; Ministério Público; e
+                                                            entidades privadas sem fins lucrativos.</p>
+                                                        </div>
+                                    
+                                                        <div class="col-12 col-md-6 col-lg-5 order-1 order-lg-2 p-0">
+                                                            <img class="img-fluid rounded-right mx-auto d-none d-md-block" src="img/img-vertical-slider-exemplo.jpg" alt="" title="Fonte: Nome do autor / Nome do Banco de Imagens">
+                                                            <img class="img-fluid rounded-top d-block d-md-none" src="img/img-mobile-exemplo.jpg" alt="Descreva a imagem. Até 125 caracteres" title="Fonte: nome do Autor / Nome do Banco de Imagens">
+                                                        </div>
                                                     </div>
                                                 </article>
 
                                                 <!-- Ítem 3 -->
                                                 <article class="carousel-item">
-                                                    <div class="row justify-content-center m-0">
-                                                    <div class="col-12 col-md-10 px-5">
-                                                        <p>O movimento do Governo Aberto impulsionou a criação da <a
-                                                            href="https://www.governodigital.gov.br/transformacao/cidadania/dados-abertos/inda-infraestrutura-nacional-de-dados-abertos"
-                                                            target="_blank">Infraestrutura Nacional de Dados Abertos (INDA)</a> que visa promover a
-                                                        publicação de dados abertos pelos órgãos e entidades públicos de forma padronizada e
-                                                        centralizada. Trata-se, portanto, de um conjunto de padrões, tecnologias, procedimentos e
-                                                        mecanismos de controle para atendimento das condições de disseminação e compartilhamento de
-                                                        dados públicos de forma aberta.</p>
-                                                    </div>
+                                                    <div class="row justify-content-center m-0  h-100 bg-marinho3 text-white">
+                                                        <div class="col-12 col-md-6 col-lg-7 order-2 order-lg-1 p-5 p-lg-4 texto">
+
+                                                            <h4 class="title my-4 p-0 pb-1">Título 3º Slide</h4>
+                                                            <p>O movimento do Governo Aberto impulsionou a criação da <a
+                                                                href="https://www.governodigital.gov.br/transformacao/cidadania/dados-abertos/inda-infraestrutura-nacional-de-dados-abertos"
+                                                                target="_blank">Infraestrutura Nacional de Dados Abertos (INDA)</a> que visa promover a
+                                                            publicação de dados abertos pelos órgãos e entidades públicos de forma padronizada e
+                                                            centralizada. Trata-se, portanto, de um conjunto de padrões, tecnologias, procedimentos e
+                                                            mecanismos de controle para atendimento das condições de disseminação e compartilhamento de
+                                                            dados públicos de forma aberta.</p>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 col-lg-5 order-1 order-lg-2 p-0">
+                                                            <img class="img-fluid rounded-right mx-auto d-none d-md-block" src="img/img-vertical-slider.jpg" alt="" title="Fonte: Nome do autor / Nome do Banco de Imagens">
+                                                            <img class="img-fluid rounded-top d-block d-md-none" src="img/img-mobile.jpg" alt="Descreva a imagem. Até 125 caracteres" title="Fonte: nome do Autor / Nome do Banco de Imagens">
+                                                        </div>
                                                     </div>
                                                 </article>
                                                 </div>
 
                                                 <a class="carousel-control-prev" href="#carousel4" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon dark-arrow" aria-hidden="true"></span>
+                                                <span class="carousel-control-prev-icon white-arrow" aria-hidden="true"></span>
                                                 <span class="sr-only">Anterior</span>
                                                 </a>
                                                 <a class="carousel-control-next" href="#carousel4" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon dark-arrow" aria-hidden="true"></span>
+                                                <span class="carousel-control-next-icon white-arrow" aria-hidden="true"></span>
 
                                                 <span class="sr-only">Próximo</span>
                                                 </a>

@@ -1419,11 +1419,34 @@ Slider (Carrossel)
 /*Carrossel imagem vertical e texto (ajustes na margem do texto no desktop*/
 
 @media (min-width: 768px) {
+  .slider-imagem-vertical  .box-quote {height:495px;}
+
   .slider-imagem-vertical .texto {
-    padding-left:6rem !important;
+    padding-left: 6rem !important;
+    height: 430px;
+    overflow: hidden;
+    overflow-y: scroll;
   }
 
-  .box-quote .slider-imagem-vertical {height:500px;}
+  
+  /*Para Firefox e edge*/
+  .slider-imagem-vertical .texto {
+    scrollbar-width: thin;
+    scrollbar-color: var(--Cinza1);
+  }
+
+  /*Para Chrome e Safari*/
+
+  
+  .slider-imagem-vertical .texto::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .slider-imagem-vertical .texto::-webkit-scrollbar-thumb {;
+    background-color: var(--Cinza1);
+    border-radius: 6px;
+    border: none;
+  }
 }
 
 /*Dentro do Box de Atenção, Saiba Mais, Material Complementar etc*/
