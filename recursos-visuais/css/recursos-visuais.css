@@ -1795,6 +1795,8 @@ Flipcard 2.0
 .flip-card .flip-card-front .button svg {
   fill: #fff;
   width: 40%;
+  top: -6px;
+  position: relative; 
 }
 
 .flip-card .flip-card-front .button {
