@@ -1428,7 +1428,6 @@ Slider (Carrossel)
     overflow-y: scroll;
   }
 
-  
   /*Para Firefox e edge*/
   .slider-imagem-vertical .texto {
     scrollbar-width: thin;
@@ -1436,8 +1435,6 @@ Slider (Carrossel)
   }
 
   /*Para Chrome e Safari*/
-
-  
   .slider-imagem-vertical .texto::-webkit-scrollbar {
     width: 5px;
   }
