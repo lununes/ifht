@@ -1419,11 +1419,11 @@ Slider (Carrossel)
 /*Carrossel imagem vertical e texto (ajustes na margem do texto no desktop*/
 
 @media (min-width: 768px) {
-  .slider-imagem-vertical  .box-quote {height:495px;}
+  .slider-imagem-vertical  .box-quote {height:450px;}
 
   .slider-imagem-vertical .texto {
-    padding-left: 6rem !important;
-    height: 430px;
+    padding-left: 5rem !important;
+    height: 412px;
     overflow: hidden;
     overflow-y: scroll;
   }
@@ -1443,6 +1443,15 @@ Slider (Carrossel)
     background-color: var(--Cinza1);
     border-radius: 6px;
     border: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .slider-imagem-vertical  .box-quote {height:495px;}
+
+  .slider-imagem-vertical .texto {
+    padding-left: 6rem !important;
+    height: 430px;
   }
 }
 
