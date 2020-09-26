@@ -382,6 +382,37 @@ pre {
 
 /* Botões */
 
+.btn {
+  font-size: 1rem;
+  font-weight: 600; 
+}
+
+/*Botão primário*/
+
+.btn-primary {
+  background-color:var(--azulIFHT);
+  border-color:var(--azulIFHT);
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--azulIFHT-over);
+  border-color: var(--azulIFHT-over);
+  color: #fff !important;
+}
+
+.btn-secondary {
+  background-color:transparent;
+  border-color:var(--azulIFHT);
+  color: var(--azulIFHT) !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--azulIFHT-over);
+  border-color: var(--azulIFHT-over);
+  color: #fff !important;
+}
+
 /* Ajuste nos botões de navegação da lição e dos exercícios de fixação*/
 
 .branchbuttoncontainer.horizontal, 

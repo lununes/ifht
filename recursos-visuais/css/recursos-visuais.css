@@ -22,8 +22,6 @@ Abas
 
 .abas {padding:0 !important;}
 
-
-
 .abas .nav {
     padding-left: 0;
     margin-bottom: 0;
@@ -7676,6 +7674,63 @@ TÍTULOS ORDENADOS
     margin-left: 0;
     padding-bottom: 4px;
   }
+
+    /* Ajustes dos títulos dentro dos 
+  boxes de atenção, saiba mais, dica etc */
+
+  .atencao .titulos-ordenados > li h5,
+  .dica .titulos-ordenados > li h5,
+  .material-complementar .titulos-ordenados > li h5,
+  .para-refletir > li h5,
+  .saiba-mais > li h5 {
+    color: var(--pretoIFHT);
+    border-bottom: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    padding-bottom: 0;
+    text-transform: none;
+  }
+
+  .atencao .titulos-ordenados > li h5:before,
+  .dica .titulos-ordenados > li h5:before,
+  .material-complementar .titulos-ordenados > li h5:before,
+  .para-refletir .titulos-ordenados > li h5:before,
+  .saiba-mais .titulos-ordenados > li h5:before {
+    position: relative;
+    top:0;
+    left:0;
+  }
+
+  .atencao .titulos-ordenados > li h4:before,
+  .atencao .titulos-ordenados > li h5:before {background:var(--laranjaIFHT);}
+
+  .atencao .titulos-ordenados > li h4:after,
+  .atencao .titulos-ordenados > li h5:after {border-bottom:1px solid var(--laranjaIFHT);}
+
+  .dica .titulos-ordenados > li h4:before,
+  .dica .titulos-ordenados > li h5:before {background:var(--amareloIFHT-pressed);}
+
+  .dica .titulos-ordenados > li h4:after,
+  .dica .titulos-ordenados > li h5:after {border-bottom:1px solid var(--amareloIFHT-pressed);}
+
+  .material-complementar .titulos-ordenados > li h4:before,
+  .material-complementar .titulos-ordenados > li h5:before {background:var(--turquesaIFHT-pressed);}
+
+  .material-complementar .titulos-ordenados > li h4:after,
+  .material-complementar .titulos-ordenados > li h5:after {border-bottom:1px solid var(--turquesaIFHT-pressed);}
+
+  .para-refletir .titulos-ordenados > li h4:before,
+  .para-refletir .titulos-ordenados > li h5:before {background:var(--roxoIFHT);}
+
+  .para-refletir .titulos-ordenados > li h4:after,
+  .para-refletir .titulos-ordenados > li h5:after {border-bottom:1px solid var(--roxoIFHT);}
+
+  .saiba-mais .titulos-ordenados > li h4:before,
+  .saiba-mais .titulos-ordenados > li h5:before {background:var(--violetaIFHT-pressed);}
+
+  .saiba-mais .titulos-ordenados > li h4:after,
+  .saiba-mais .titulos-ordenados > li h5:after {border-bottom:1px solid var(--violetaIFHT-pressed);}
 
   @media (min-width: 768px) {
 
