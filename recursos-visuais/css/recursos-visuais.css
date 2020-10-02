@@ -1362,6 +1362,146 @@ Card com imagem
   .card-box .card .card-body {padding:0.5rem 2rem 1rem;}
 }
 
+/* -------------------------------- 
+
+Comparação
+
+-------------------------------- */
+
+.obj-comparacao .item {
+  background: var(--azulIFHT);
+  border-radius: 20px;
+  color:#fff;
+  font-size: 1rem;
+  min-height: 130px;
+  padding-bottom:12px;
+}
+
+.obj-comparacao a {
+color:var(--marinhoIFHT);
+}
+
+.obj-comparacao a:hover {
+color:var(--marinhoIFHT-pressed);
+}
+
+.obj-comparacao .svg-inline--fa.fa-times {
+  color:var(--pretoIFHT);
+}
+
+.obj-comparacao .item ul {
+list-style: disc;
+text-align: left;
+}
+
+/*A media querie abaixo é para fazer com que o vertical align funcione em resoluções maiores que telas de celulares*/
+@media (min-width: 768px) {
+  
+  .obj-comparacao .col-md-5, 
+  .obj-comparacao .col-xs-12 {float:none;}
+}
+
+@media (max-width: 767px) {
+  
+  .obj-comparacao .svg-inline--fa.fa-times {margin-top: 5px;}
+
+  .obj-comparacao p {
+    padding: 0;
+    text-align: left;
+  }
+
+.obj-comparacao .times p {text-align: center;}
+
+}
+
+/*Comparação dentro dos boxes de Saiba Mais, 
+Atenção, Para Refletir, Material Complementar:*/
+
+.atencao .obj-comparacao .item,
+.material-complementar .obj-comparacao .item,
+.para-refletir .obj-comparacao .item,
+.saiba-mais .obj-comparacao .item {
+    border-radius: 20px;
+    color:var(--brancoIFHT);
+    font-size: 13px;
+    margin: 10px 0 30px;
+    min-height: 130px;
+    padding-bottom:12px;
+    text-align: center
+}
+
+.atencao .obj-comparacao h5,
+.material-complementar .obj-comparacao h5,
+.para-refletir .obj-comparacao h5,
+.saiba-mais .obj-comparacao h5{
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
+  color: var(--brancoIFHT);
+  border-bottom: none;
+  text-transform: none;
+}
+
+.atencao .obj-comparacao h5::before,
+.material-complementar .obj-comparacao h5::before,
+.para-refletir .obj-comparacao h5::before,
+.saiba-mais .obj-comparacao h5::before {
+  display:none;
+}
+
+.atencao .obj-comparacao a,
+.material-complementar .obj-comparacao a,
+.para-refletir .obj-comparacao a,
+.saiba-mais .obj-comparacao a {
+  color:var(--brancoIFHT);
+  text-decoration:underline;
+}
+
+.atencao .obj-comparacao p,
+.material-complementar .obj-comparacao p,
+.para-refletir .obj-comparacao p,
+.saiba-mais .obj-comparacao p {
+  padding: 0 30px;
+}
+
+.atencao .obj-comparacao .item.item1,
+.material-complementar .obj-comparacao .item.item1,
+.para-refletir .obj-comparacao .item.item1,
+.saiba-mais .obj-comparacao .item.item1,
+
+.atencao .obj-comparacao .item.item2,
+.material-complementar .obj-comparacao .item.item2, 
+.para-refletir .obj-comparacao .item.item2,  
+.saiba-mais .obj-comparacao .item.item2 {
+  background:var(--turquesaIFHT-pressed);
+}
+
+.atencao .obj-comparacao .item.item1,
+.atencao .obj-comparacao .item.item2  {
+  background: var(--laranjaIFHT);
+}
+
+.atencao .obj-comparacao p {color:var(--brancoIFHT) !important;}
+
+.atencao .obj-comparacao .svg-inline--fa.fa-times, 
+.atencao .obj-comparacao .svg-inline--fa.fa-arrow-right, 
+.atencao .obj-comparacao .svg-inline--fa.fa-arrow-down,
+
+.material-complementar .obj-comparacao .svg-inline--fa.fa-times, 
+.material-complementar .obj-comparacao .svg-inline--fa.fa-arrow-right, 
+.material-complementar .obj-comparacao .svg-inline--fa.fa-arrow-down,  
+
+.para-refletir .obj-comparacao .svg-inline--fa.fa-times, 
+.para-refletir .obj-comparacao .svg-inline--fa.fa-arrow-right, 
+.para-refletir .obj-comparacao .svg-inline--fa.fa-arrow-down,  
+
+.saiba-mais .obj-comparacao .svg-inline--fa.fa-times, 
+.saiba-mais .obj-comparacao .svg-inline--fa.fa-arrow-right, 
+.saiba-mais .obj-comparacao .svg-inline--fa.fa-arrow-down {
+    color:#333;
+    margin-top:55px;
+    font-size: inherit;
+}
+
 
 /* -------------------------------- 
 
@@ -1559,7 +1699,6 @@ Citação Longa
 
 .divider .divider-bottom {margin-top:50px;}
 
-
 /*----------------------------- 
 
 Destaque
@@ -1568,151 +1707,11 @@ Destaque
 
 .destaque {font-size:1.5rem;}
 
-
-/*----------------------------- 
-
-Flipcard-ANTIGO (remover depois)
-
- -----------------------------*/
-
-
- .flipcard {
-  position: relative;
-  /*top: 50%;
-  left: 50%;*/
-  height: auto;
-  min-height: 200px;
-  /*transform: translate(-50%, -50%);
-  transform-style: preserve-3d;*/
-  perspective: 600px;
-  transition: .5s;
-  margin-bottom: 20px;
-}
-
-.flipcard:hover .flipcard-front {
-    transform: rotateX(-180deg);
-}
-
-.flipcard:hover .flipcard-back {
-    transform: rotateX(0deg);
-}
-
-.flipcard-front {
-  height: 100%;
-  width: 100%;
-  background-image: url(https://99px.ru/sstorage/56/2013/12/image_563012130153328414049.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #000;
-  backface-visibility: hidden;
-  transform: rotateX(0deg);
-  transition: .5s;
-}
-
-.flipcard-front h4 {
-    margin: 25% auto 0 auto;
-    font-size: 20px;
-    padding: 15px;
-    background: var(--brancoIFHT-over);
-}
-
-.flipcard-front h4 span {
-  display: block;
-  background: var(--turquesaIFHT);
-  width: 50px;
-  height: 50px;
-  vertical-align: middle;
-  margin-left: auto;
-  border-radius: 30px;
-  margin-right: auto;
-  padding-top: 8px;
-}
-
-.flipcard-back {
-  height: auto;
-  min-height: 200px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--brancoIFHT-pressed);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: rotateX(180deg);
-  transition: .5s;
-  color: #000;
-  padding:20px;
-}
-
-.flipcard-back:hover {
-  color: #000;
-  background-color: #fff;
-  border:1px solid #ebebeb;
-}
-
-.flipcard-back h4  {
-  margin: 60% auto 35% auto;
-  font-size: 26px;
-}
-
-.flipcard-back span {font-size: 20px;}
-
-.flipcard-back a {
-  height: 20px;
-  width: 20px;
-  padding: 5px 5px;
-  border-radius: 4px;
-  line-height: 20px;
-}
-
-.flipcard-back p {
-  position: relative;
-  top:35%;
-}
-
-.flipcard-back ul {
-  list-style: disc;
-}
-
-@media (max-width:1600px){
-
-  .flipcard-back p {top: 13%;}
-
-}
-
-@media (max-width:575px){
-
-  .flipcard-back p {
-    top: 6%;
-    font-size: 13px;
-    line-height: 1.5rem;
-  }
-}
-
-.item1 .flipcard-front {background:url(../img-geral/bg-flipcard1.jpg);}
-.item2 .flipcard-front {background:url(../img-geral/bg-flipcard2.jpg);}
-.item3 .flipcard-front {background:url(../img-geral/bg-flipcard3.jpg);}
-.item4 .flipcard-front {background:url(../img-geral/bg-flipcard4.jpg);}
-.item5 .flipcard-front {background:url(../img-geral/bg-flipcard5.jpg);}
-.item6 .flipcard-front {background:url(../img-geral/bg-flipcard6.jpg);}
-.item7 .flipcard-front {background:url(../img-geral/bg-flipcard7.jpg);}
-
-
-/*----------------------------- 
-
-Flipcard
-
- -----------------------------*/
-
 /*----------------------------- 
 
 Flipcard 2.0
 
  -----------------------------*/
-
 
 .flip-card {
    position:relative;
@@ -2455,8 +2454,6 @@ Infográfico (esquema) circular
 
 }
 
-
-
 /* -------------------------------- 
 
 Lista Simples
@@ -2537,78 +2534,6 @@ Lista Ordenada
 
 .obj-lista ol ol ol li::before {background: #EE9EFF;}
 
-
-/* -------------------------------- 
-
-Lista em círculos
-
--------------------------------- */
-
-.circle-obj {
-   position: relative;
-   width: 12rem;
-   height: 12rem;
-   padding: 10px;
-   margin: 2rem auto 8rem;
-   border-radius: 50%;
-   background: var(--marinhoIFHT-pressed);
-}
-
-.circle-content h5 {
-    color:var(--marinhoIFHT-pressed);
-    font-weight: 700;
-    margin:15px 0 0 0;
-}
-
-.circle-content p {
-  font-size: 0.9rem;
-  line-height: normal;
-  margin-top: 5px;
-}
-
-.circle-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-.circle-content:before {
-  content: '';
-  vertical-align: middle;
-  display: inline-block;
-  width: 0;
-  height: 100%;
-}
-
-.circle-content span {
-    vertical-align: middle;
-    display: inline-block;
-}
-
-.circle-content .emoji {font-family: "Segoe UI Symbol";}
-
-.circle-content img {
-  display: inline-block;
-  width:33%;
-}
-
-.circle-content .svg-inline--fa {
-  color: #fff;
-  font-size: 4rem;
- /* top: 10%;
-  position: relative;*/
-  vertical-align: middle;
-}
-
-/*Ícones do FontAwesome dentro dos círculos*/
-
-.circle-content .far {
-  color: #fff;
-  vertical-align: middle;
-}
 
 /* -------------------------------- 
 
@@ -2940,35 +2865,39 @@ body, html {
 
 /* -------------------------------- 
 
-Box de Comparação
+Podcast
 
 -------------------------------- */
 
-  .obj-comparacao .item {
-      background: var(--azulIFHT);
-      border-radius: 20px;
-      color:#fff;
-      font-size: 1rem;
-      min-height: 130px;
-      padding-bottom:12px;
-  }
+.green-audio-player {
+  width: 100%;
+  min-width: min-content;
+  height: 80px;
+  padding:0 10px;
+  background:var(--azulIFHT);
+  border-radius: 12px;
+}
 
-  .obj-comparacao a {
-    color:var(--marinhoIFHT);
-  }
+.green-audio-player .play-pause-btn__icon,
+.green-audio-player .volume__speaker,
+.green-audio-player svg {
+  /* fill:#fff; */
+ fill: var(--marinhoIFHT-pressed);
+}
+.green-audio-player .slider .gap-progress .pin,
+.green-audio-player .slider .gap-progress {background-color:var(--marinhoIFHT-pressed);}
 
-  .obj-comparacao a:hover {
-    color:var(--marinhoIFHT-pressed);
-  }
+.green-audio-player .controls {color:var(--brancoIFHT);}
 
-  .obj-comparacao .svg-inline--fa.fa-times {
-      color:var(--pretoIFHT);
-  }
+.green-audio-player .slider {background-color:var(--brancoIFHT-pressed);}
 
-  .obj-comparacao .item ul {
-    list-style: disc;
-    text-align: left;
+@media (min-width:768px) {
+  .green-audio-player {
+    padding:0 20px;
   }
+}
+
+
 
 /* -------------------------------- 
 
@@ -2986,116 +2915,6 @@ Quadro Sequencial
   position: relative;
   left: calc(50% - 25px);
   margin-top: 0;
-}
-
-
-/*A media querie abaixo é para fazer com que o vertical align funcione em resoluções maiores que telas de celulares*/
-@media (min-width: 768px) {
-  
-  .obj-comparacao .col-md-5, 
-  .obj-comparacao .col-xs-12 {float:none;}
-}
-
-@media (max-width: 767px) {
-  
-  .obj-comparacao .svg-inline--fa.fa-times {margin-top: 5px;}
-
-  .obj-comparacao p {
-    padding: 0;
-    text-align: left;
-  }
-
-.obj-comparacao .times p {text-align: center;}
-
-}
-
-
-/*Quadro de comparação dentro dos boxes de Saiba Mais, Atenção, Para Refletir, Material Complementar:*/
-
-.atencao .obj-comparacao .item,
-.material-complementar .obj-comparacao .item,
-.para-refletir .obj-comparacao .item,
-.saiba-mais .obj-comparacao .item {
-    border-radius: 20px;
-    color:var(--brancoIFHT);
-    font-size: 13px;
-    margin: 10px 0 30px;
-    min-height: 130px;
-    padding-bottom:12px;
-    text-align: center
-}
-
-.atencao .obj-comparacao h5,
-.material-complementar .obj-comparacao h5,
-.para-refletir .obj-comparacao h5,
-.saiba-mais .obj-comparacao h5{
-  margin: 20px 0 10px;
-  font-size: 1.1rem;
-  color: var(--brancoIFHT);
-  border-bottom: none;
-  text-transform: none;
-}
-
-.atencao .obj-comparacao h5::before,
-.material-complementar .obj-comparacao h5::before,
-.para-refletir .obj-comparacao h5::before,
-.saiba-mais .obj-comparacao h5::before {
-  display:none;
-}
-
-.atencao .obj-comparacao a,
-.material-complementar .obj-comparacao a,
-.para-refletir .obj-comparacao a,
-.saiba-mais .obj-comparacao a {
-  color:var(--brancoIFHT);
-  text-decoration:underline;
-}
-
-.atencao .obj-comparacao p,
-.material-complementar .obj-comparacao p,
-.para-refletir .obj-comparacao p,
-.saiba-mais .obj-comparacao p {
-  padding: 0 30px;
-}
-
-.atencao .obj-comparacao .item.item1,
-.material-complementar .obj-comparacao .item.item1,
-.para-refletir .obj-comparacao .item.item1,
-.saiba-mais .obj-comparacao .item.item1,
-
-.atencao .obj-comparacao .item.item2,
-.material-complementar .obj-comparacao .item.item2, 
-.para-refletir .obj-comparacao .item.item2,  
-.saiba-mais .obj-comparacao .item.item2 {
-  background:var(--turquesaIFHT-pressed);
-}
-
-.atencao .obj-comparacao .item.item1,
-.atencao .obj-comparacao .item.item2  {
-  background: var(--laranjaIFHT);
-}
-
-.atencao .obj-comparacao p {color:var(--brancoIFHT) !important;}
-
-
-.atencao .obj-comparacao .svg-inline--fa.fa-times, 
-.atencao .obj-comparacao .svg-inline--fa.fa-arrow-right, 
-.atencao .obj-comparacao .svg-inline--fa.fa-arrow-down,
-
-.material-complementar .obj-comparacao .svg-inline--fa.fa-times, 
-.material-complementar .obj-comparacao .svg-inline--fa.fa-arrow-right, 
-.material-complementar .obj-comparacao .svg-inline--fa.fa-arrow-down,  
-
-.para-refletir .obj-comparacao .svg-inline--fa.fa-times, 
-.para-refletir .obj-comparacao .svg-inline--fa.fa-arrow-right, 
-.para-refletir .obj-comparacao .svg-inline--fa.fa-arrow-down,  
-
-.saiba-mais .obj-comparacao .svg-inline--fa.fa-times, 
-.saiba-mais .obj-comparacao .svg-inline--fa.fa-arrow-right, 
-.saiba-mais .obj-comparacao .svg-inline--fa.fa-arrow-down {
-    color:#333;
-    margin-top:55px;
-    font-size: inherit;
 }
 
 /* -------------------------------- 
@@ -3345,8 +3164,6 @@ Slider 2
     .cd-slider-wrapper {height: 50vh;}
   }
 
-
-
 /* -------------------------------- 
 Slider Navigation
 -------------------------------- */
@@ -3472,135 +3289,6 @@ Tabela
 .table td ul li {margin-bottom:10px;}
 
 .table td ul li .svg-inline--fa {color:var(--azulIFHT);}
-
-
-/* -------------------------------- 
-Tabelas-Colunagem
--------------------------------- */
-
-.tabela-colunagem .row {margin:0;}
-
-.tabela-colunagem [class*=row] {
-  border:1px solid var(--brancoIFHT-pressed);
-  margin-bottom:2rem;
-}
-
-.tabela-colunagem [class*=col-]{padding:0 15px;}
-
-.tabela-colunagem [class*=col-md],
-.tabela-colunagem [class*=col-lg] {border-left:1px solid var(--brancoIFHT-pressed);}
-
-.tabela-colunagem img {margin-bottom: 1.5em;}
-
-.tabela-colunagem .table-striped {
-  background: var(--brancoIFHT-over);
-}
-
-.tabela-colunagem .fa-chevron-right {color:var(--azulIFHT);}
-
-
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-  .tabela-colunagem img {margin-bottom: 0;}
-  .tabela-colunagem [class*=col-]{padding:15px;}
-
-  .tabela-colunagem [class*=row] {margin-bottom:0;}
-}
-
-
-/* -------------------------------- 
-Tabelas Faux (utilizam colunagem do 
-Bootstrap para simular visualmente uma tabela)
--------------------------------- */
-.card-block .tabela-faux .row {
-  margin:0;
-  border-top: 1px solid var(--Cinza4);
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.card-block .tabela-faux .row:nth-child(1) {border-top:none;}
-
-.tabela-faux {border: 1px solid var(--Cinza4);}
-
-/*Truque em CSS para manter a cor de fundo fundo, no caso de colunas listradas. 
- A quantidade de % depende do número de colunas que se quer. 
- Por default, fiz uma tabela com 4 colunas.*/ 
-
-.tabela-faux.columns { 
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        color-stop(0, #f2fbfd),
-        color-stop(25%, #f2fbfd),
-        color-stop(25%, #fff),
-        color-stop(50%, #fff),
-        color-stop(50%, #f2fbfd),
-        color-stop(75%, #f2fbfd),
-        color-stop(75%, #fff),
-        color-stop(100%, #fff)
-    );      
-    background-image: -webkit-linear-gradient(
-        left, 
-        #f2fbfd, 
-        #f2fbfd 25%,
-        #fff 25%,
-        #fff 50%,
-        #f2fbfd 50%,
-        #f2fbfd 75%,
-        #fff 75%,
-        #fff 100%
-    );
-    background-image: -moz-linear-gradient(
-        left, 
-        #f2fbfd, 
-        #f2fbfd 25%,
-        #fff 25%,
-        #fff 50%,
-        #f2fbfd 50%,
-        #f2fbfd 75%,
-        #fff 75%,
-        #fff 100%
-    );
-    background-image: -ms-linear-gradient(
-        left, 
-        #f2fbfd, 
-        #f2fbfd 25%,
-        #fff 25%,
-        #fff 50%,
-        #f2fbfd 50%,
-        #f2fbfd 75%,
-        #fff 75%,
-        #fff 100%
-    );
-    background-image: -o-linear-gradient(
-        left, 
-        #f2fbfd, 
-        #f2fbfd 25%,
-        #fff 25%,
-        #fff 50%,
-        #f2fbfd 50%,
-        #f2fbfd 75%,
-        #fff 75%,
-        #fff 100%
-    );
-}
-
-@media (max-width: 767px) {
-
-  .tabela-faux {border:none;}
-
-  .card-block .tabela-faux .row {
-    border: 1px solid var(--Cinza4);
-    padding-top:0;
-    padding-bottom:0;
-    margin-bottom: 15px;
-  }
-
-  .tabela-faux.columns {background:var(--brancoIFHT);}
-}
-
 
 
 /* -------------------------------- 
@@ -3805,8 +3493,6 @@ Bootstrap para simular visualmente uma tabela)
 @media (min-width: 768px) {
 
   .thumb-accordion  {margin-bottom:0;}
-
-  
 }
 
 /* -------------------------------- 
@@ -4929,76 +4615,6 @@ u,
   color: inherit;
   fill: currentColor
 }
-/* 
-.btn {
-  position: relative;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  text-decoration: none;
-  line-height: 1;
-  font-size: 1em;
-  font-size: var(--btn-font-size, 1em);
-  padding-top: 0.5em;
-  padding-top: var(--btn-padding-y, 0.5em);
-  padding-bottom: 0.5em;
-  padding-bottom: var(--btn-padding-y, 0.5em);
-  padding-left: 0.75em;
-  padding-left: var(--btn-padding-x, 0.75em);
-  padding-right: 0.75em;
-  padding-right: var(--btn-padding-x, 0.75em);
-  border-radius: 0.25em;
-  border-radius: var(--btn-radius, 0.25em)
-}
-
-.btn--primary {
-  background-color: hsl(220, 90%, 56%);
-  background-color: var(--color-primary, #2a6df4);
-  color: hsl(0, 0%, 100%);
-  color: var(--color-white, #fff)
-}
-
-.btn--subtle {
-  background-color: hsl(240, 1%, 83%);
-  background-color: var(--color-contrast-low, #d3d3d4);
-  color: hsl(240, 8%, 12%);
-  color: var(--color-contrast-higher, #1c1c21)
-}
-
-.btn--accent {
-  background-color: hsl(355, 90%, 61%);
-  background-color: var(--color-accent, #f54251);
-  color: hsl(0, 0%, 100%);
-  color: var(--color-white, #fff)
-}
-
-.btn--disabled {
-  cursor: not-allowed
-}
-
-.btn--sm {
-  font-size: 0.8em;
-  font-size: var(--btn-font-size-sm, 0.8em)
-}
-
-.btn--md {
-  font-size: 1.2em;
-  font-size: var(--btn-font-size-md, 1.2em)
-}
-
-.btn--lg {
-  font-size: 1.4em;
-  font-size: var(--btn-font-size-lg, 1.4em)
-}
-
-.btn--icon {
-  padding: 0.5em;
-  padding: var(--btn-padding-y, 0.5em)
-} */
 
 .form-control {
   background-color: hsl(0, 0%, 100%);
@@ -7731,6 +7347,17 @@ TÍTULOS ORDENADOS
 
   .saiba-mais .titulos-ordenados > li h4:after,
   .saiba-mais .titulos-ordenados > li h5:after {border-bottom:1px solid var(--violetaIFHT-pressed);}
+
+    /*Ajustes dos títulos quando tiver um box de destaque*/
+
+    .titulos-ordenados > li h4.title::before, 
+    .titulos-ordenados > li h5.title::before {display:none;}
+  
+    .titulos-ordenados > li h4.title::after, 
+    .titulos-ordenados > li h5.title::after {
+      border-bottom:none;
+      margin-bottom:0;
+    }
 
   @media (min-width: 768px) {
 

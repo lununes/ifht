@@ -687,7 +687,7 @@ h1, h2, h3, h4, h5, h6 {font-weight: 600;}
 
 .legenda {
   margin: 5px 0 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: bold;
   line-height: 1.2rem;
 }
@@ -695,10 +695,11 @@ h1, h2, h3, h4, h5, h6 {font-weight: 600;}
 .card-block p.legenda {line-height: 1.2rem;} /*Ajuste por causa das configurações do Moodle*/
 
 .fonte {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-style: italic;
   white-space: break-spaces;
   word-wrap: break-word;
+  font-size:12px;
 }
 
 /* Ajustes Bootstrap

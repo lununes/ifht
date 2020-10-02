@@ -22,10 +22,12 @@
     <!-- CSS (colar no Moodle) -->
     <link rel="stylesheet" href="css/bootstrap4-grid.css">
     <link rel="stylesheet" href="css/bootstrap4-utilities.css">
+    <link rel="stylesheet" href="js/audio/dist/css/green-audio-player.css" >
     <link rel="stylesheet" href="css/timeline-nova.css">
     <!-- <link rel="stylesheet" href="css/antes-e-depois.css">  -->
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/recursos-visuais.css">
+    
 
     <!-- CSS para impressão -->
     <link rel="stylesheet" type="text/css" href="css/impressao.css" media="print" />
@@ -278,7 +280,7 @@
                                     
                                                         <div class="col-12 col-lg-6 order-1 order-lg-2">
                                                         <img class="img-fluid rounded mx-auto d-block w-75 mb-3" src="img/img.jpg" alt="" title="photoroyalty / Freepik">
-                                                        <p class="source text-center">Fonte: Freepik.</p>
+                                                        <p class="fonte text-center">Fonte: Freepik.</p>
                                                         </div>
                                                     </div>
                                                     <!-- Fim de texto e imagem à direita -->
@@ -1658,6 +1660,38 @@
             </section>
             <!-- Fim da Sessão Parallax-->
 
+             <!-- Sessão: Podcast -->
+             <section id="podcast" class="bg-branco1 py-5 px-3">
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10">
+                            <h2 class="title text-center mb-4">Podcast</h2>
+
+                            <p>Utilizado para tocar áudios.</p>
+                            <p><strong>Obs: Os arquivos de áudio precisam ficar dentro da pasta com nome "audio".</strong></p>
+
+                            <!-- Podcast -->
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-12 col-md-10 p-0">
+                                    <div class="player-with-download">
+                                        <audio crossorigin>
+                                            <source src="audio/example-2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <p class="legenda text-center">Áúdio 1 - Nome do Áudio (Se necessário)</p>
+                                    <p class="fonte text-center">Fonte: IFHT (2020) (Se necessário)</p>
+                                </div>
+                            </div>
+                            <!-- Fim de Podcast -->
+
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <!-- Fim da Sessão Podcast -->
+
             <!-- Sessão: Slider -->
             <section id="slider" class="bg-branco1 py-5 px-3">
                 <div class="container">
@@ -2287,7 +2321,7 @@
             
                                 <div class="col-12 col-md-6 col-lg-5 order-1 order-lg-2">
                                 <img class="img-fluid rounded mx-auto d-block mb-3" src="img/img.jpg" alt="" title="Fonte: Nome do autor / Nome do Banco de Imagens">
-                                <p class="source text-center">Fonte: Freepik.</p>
+                                <p class="fonte text-center">Fonte: Freepik.</p>
                                 </div>
                             </div>
                             <!-- Fim de texto e imagem à direita -->
@@ -2298,7 +2332,7 @@
                             <div class="row justify-content-center mt-5">
                                 <div class="col-12 col-md-6 col-lg-5">
                                 <img class="img-fluid rounded mx-auto d-block mb-3" src="img/img.jpg" alt="" title="Fonte: Nome do autor / Nome do Banco de Imagens">
-                                <p class="source text-center">Fonte: Pexels</p>
+                                <p class="fonte text-center">Fonte: Pexels</p>
                                 </div>
                 
                                 <div class="col-12 col-md-6 col-lg-7">
@@ -2720,6 +2754,8 @@
 <script src="js/main.js"></script>
 <script src="js/timeline-nova.js"></script>
 <script src="js/antes-e-depois.js"></script>
+<script src="js/audio/dist/js/green-audio-player.js"></script>
+<script src="js/podcast.js"></script>
 
 </html>
 
