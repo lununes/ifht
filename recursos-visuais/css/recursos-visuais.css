@@ -1895,7 +1895,10 @@ Flipcard 2.0
   position: relative;
 }
 
-.flip-card .flip-card-front .card-title {top:40%;}
+.flip-card .flip-card-front .card-title {
+  top:40%;
+  min-height: 90px;
+}
 
 .flip-card .flip-card-front .card-footer {top: 50%;}
 
@@ -7366,6 +7369,12 @@ TÍTULOS ORDENADOS
 
     .titulos-ordenados > li h4::before {margin-left:-3rem;}
   }
+
+  /* Remover o ::before do <h4> caso o flipcard 
+esteja inserido dentro de um título ordenado*/
+
+.titulos-ordenados > li .flip-card  h4::before, 
+.titulos-ordenados > li .flip-card h5::before {display:none !important;}
 
   /*Modais dentro dos títulos ordenados*/
 
