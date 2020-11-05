@@ -1585,7 +1585,8 @@ Slider (Carrossel)
 }
 
 @media (min-width: 992px) {
-  .slider-imagem-vertical  .box-quote {height:495px;}
+  /* .slider-imagem-vertical .box-quote {height:495px;} */
+  .slider-imagem-vertical .box-quote {height:auto;}
 
   .slider-imagem-vertical .texto {
     padding-left: 6rem !important;
@@ -2499,6 +2500,10 @@ Lista Simples
 
 .atencao .obj-lista .list-group-item i.icon-bullet {color:var(--laranjaIFHT);}
 
+/*Lista simples dentro de um slider*/
+
+.slide .obj-lista .list-group {margin:1rem 2.5rem;}
+
 
 /* -------------------------------- 
 
@@ -2674,22 +2679,26 @@ Modal
   }
 }
 
-/*Modal Glossário*/
+/*Modal Boxes de Atenção, Dica, Glossário, 
+Material Complementar, Para Refletir e Saiba Mais*/
 
 .modal.glossario .modal-header {
   border-top:8px solid var(--marinhoIFHT);
   border-bottom: 0;
 }
 
-.modal.glossario .modal-content {position: initial;}
+.modal.saiba-mais .modal-header {
+  border-top:8px solid var(--violetaIFHT);
+  border-bottom: 0;
+}
 
-.modal.glossario .modal-dialog.multi-border::before {
+.modal.glossario .modal-content,
+.modal.saiba-mais .modal-content{position: initial;}
+
+.modal.glossario .modal-dialog.multi-border::before,
+.modal.saiba-mais .modal-dialog.multi-border::before {
   content: "";
   position: absolute;
-  border-top: 6px solid var(--marinhoIFHT-pressed);
-  border-left: 1px solid var(--marinhoIFHT-pressed);
-  border-right: 1px solid var(--marinhoIFHT-pressed);
-  border-bottom: 1px solid var(--marinhoIFHT-pressed);
   box-shadow: 5px 3px 5px rgba(0,0,0, 0.2);
   top: 0px;
   left: 0px;
@@ -2698,9 +2707,22 @@ Modal
   border-radius: 6px;
 }
 
-.modal.glossario h4 {
-  color: var(--marinhoIFHT-pressed);
-  border-bottom:1px solid var(--marinhoIFHT-pressed); /*#3c7a76*/
+.modal.glossario .modal-dialog.multi-border::before { 
+  border-top: 6px solid var(--marinhoIFHT-pressed);
+  border-left: 1px solid var(--marinhoIFHT-pressed);
+  border-right: 1px solid var(--marinhoIFHT-pressed);
+  border-bottom: 1px solid var(--marinhoIFHT-pressed);
+}
+
+.modal.saiba-mais .modal-dialog.multi-border::before { 
+  border-top: 6px solid var(--violetaIFHT-pressed);
+  border-left: 1px solid var(--violetaIFHT-pressed);
+  border-right: 1px solid var(--violetaIFHT-pressed);
+  border-bottom: 1px solid var(--violetaIFHT-pressed);
+}
+
+.modal.glossario h4,
+.modal.saiba-mais h4  {
   font-size:22px;
   font-weight: 700;
   margin-bottom:20px;
@@ -2708,22 +2730,37 @@ Modal
   padding-left: 0;
   margin-left: 2.3rem;
   text-transform:uppercase;
-  width:95%;
+  /* width:95%; */
+  width:92%;
+  float:left;
 }
 
-.modal.glossario h4::before {
+.modal.glossario h4 {
+  color: var(--marinhoIFHT-pressed);
+  border-bottom:1px solid var(--marinhoIFHT-pressed); /*#3c7a76*/
+}
+
+.modal.saiba-mais h4 {
+  color: var(--violetaIFHT-pressed);
+  border-bottom:1px solid var(--violetaIFHT-pressed); /*#3c7a76*/
+}
+
+.modal.glossario h4::before,
+.modal.saiba-mais h4::before {
   display: block;
   width: 75px;
-  content: url(../img/ic-glossario.svg);
   position: absolute;
   top: -20px;
   left: -35px;
 }
 
+.modal.glossario h4::before {content: url(https://gai.ifht.net.br/pluginfile.php/7265/mod_folder/content/0/_img/ic-glossario.svg);}
 
-.modal.glossario h5 {
+.modal.saiba-mais h4::before {content: url(https://gai.ifht.net.br/pluginfile.php/7265/mod_folder/content/0/_img/ic-saibamais.svg);}
+
+.modal.glossario h5,
+.modal.saiba-mais h5, {
     border-bottom:none;
-    color: var(--marinhoIFHT-pressed);
     margin-bottom: 10px;
     padding-bottom: 0;
     text-transform: none;
@@ -2731,17 +2768,32 @@ Modal
     font-weight: 600;
 }
 
-.modal.glossario h5::before {display:none;}
+.modal.glossario h5 {color: var(--marinhoIFHT-pressed);}
+.modal.saiba-mais h5 {color: var(--violetaIFHT-pressed);}
 
-.modal.glossario .modal-body {padding: 1rem 3rem;}
+.modal.glossario h5::before,
+.modal.saiba-mais h5::before {display:none;}
+
+.modal.glossario .modal-body,
+.modal.saiba-mais .modal-body {padding: 1rem 3rem;}
 
 .modal.glossario .modal-footer .btn-default {
   background: var(--marinhoIFHT);
   color:#fff;
 }
 
+.modal.saiba-mais .modal-footer .btn-default {
+  background: var(--violetaIFHT);
+  color:#fff;
+}
+
 .modal.glossario .modal-footer .btn-default:hover {
   background: var(--marinhoIFHT-over);
+  color:#fff;
+}
+
+.modal.saiba-mais .modal-footer .btn-default:hover {
+  background: var(--violetaIFHT-over);
   color:#fff;
 }
 
@@ -2751,13 +2803,27 @@ Modal
 }
 
 
+.modal.saiba-mais .modal-footer .btn-default:focus {
+  background: var(--violetaIFHT-pressed);
+  color:#fff;
+}
+
+
 @media only screen and (max-width:576px){
-  .modal.glossario .modal-dialog {
+
+  .modal.glossario h4,
+  .modal.saiba-mais h4 {
+    width:80%;
+  }
+
+  .modal.glossario .modal-dialog,
+  .modal.saiba-mais .modal-dialog {
     width: 85vw;
     margin: 1.5rem auto;
   }
 
-  .modal.glossario h4::before {
+  .modal.glossario h4::before,
+  .modal.saiba-mais h4::before {
     width: 65px;
     top: -5px;
     left: -20px;
@@ -2899,6 +2965,14 @@ Podcast
     padding:0 20px;
   }
 }
+
+.podcast {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+}
+
+.podcast .controlBar {background-color: var(--azulIFHT) !important;}
 
 
 
@@ -6910,6 +6984,17 @@ mark {
   height: 24px
 }
 
+.cd-timeline_img .fa,
+.cd-timeline_img .fas,
+.cd-timeline_img .fa,
+.cd-timeline_img .far,
+.cd-timeline_img .fa,
+.cd-timeline_img i,
+.cd-timeline_img .svg-inline--fa {
+  color:#fff;
+  font-size:1rem;
+}
+
 @media (min-width: 64rem) {
   .cd-timeline_img {
       width: 60px;
@@ -6919,6 +7004,15 @@ mark {
       margin-left: calc(5% - 30px);
       will-change: transform
   }
+
+  .cd-timeline_img .fa,
+  .cd-timeline_img .fas,
+  .cd-timeline_img .fa,
+  .cd-timeline_img .far,
+  .cd-timeline_img .fa,
+  .cd-timeline_img i, 
+  .cd-timeline_img .svg-inline--fa {font-size:1.5rem;}
+
 
   .cd-timeline__block:nth-child(even) .cd-timeline_img {
       margin-right: calc(5% - 30px)
@@ -7293,6 +7387,43 @@ TÍTULOS ORDENADOS
     margin-left: 0;
     padding-bottom: 4px;
   }
+
+  /* Ajustes do boxes de atenção, saiba mais etc 
+    quando estiverem dentro de títulos ordenados */
+
+    .titulos-ordenados > li .atencao h5::after,
+    .titulos-ordenados > li .dica h5::after,
+    .titulos-ordenados > li .glossario h5::after,
+    .titulos-ordenados > li .material-complementar h5::after,
+    .titulos-ordenados > li .atepara-refletir h5::after,
+    .titulos-ordenados > li .saiba-mais h5::after {border-bottom:none;}
+
+    .titulos-ordenados > li .atencao h5::before,
+    .titulos-ordenados > li .dica h5::before,
+    .titulos-ordenados > li .glossario h5::before,
+    .titulos-ordenados > li .material-complementar h5::before,
+    .titulos-ordenados > li .atepara-refletir h5::before,
+    .titulos-ordenados > li .saiba-mais h5::before {
+      background:transparent;
+      display: block;
+      width: 75px;
+      position: absolute;
+      top: -20px;
+      left: -35px;
+      margin-left:0;
+  }
+
+  .titulos-ordenados > li .atencao h5::before {content: url(https://gai.ifht.net.br/pluginfile.php/7265/mod_folder/content/0/_img/ic-atencao.svg);}
+
+  .titulos-ordenados > li .dica h5::before {content: url(https://gai.ifht.net.br/pluginfile.php/7265/mod_folder/content/0/_img/ic-dica.svg);}
+
+  .titulos-ordenados > li .glossario h5::before {content: url(https://gai.ifht.net.br/pluginfile.php/7265/mod_folder/content/0/_img/ic-glossario.svg);}
+
+  .titulos-ordenados > li .material-complementar h5::before {content: url(https://gai.ifht.net.br/pluginfile.php/7265/mod_folder/content/0/_img/ic-materialComplementar.svg);}
+
+  .titulos-ordenados > li .para-refletir h5::before {content: url(https://gai.ifht.net.br/pluginfile.php/7265/mod_folder/content/0/_img/ic-paraRefletir.svg);}
+
+  .titulos-ordenados > li .saiba-mais h5::before {content: url(https://gai.ifht.net.br/pluginfile.php/7265/mod_folder/content/0/_img/ic-saibamais.svg);}
 
     /* Ajustes dos títulos dentro dos 
   boxes de atenção, saiba mais, dica etc */

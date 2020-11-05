@@ -224,6 +224,51 @@ Texturas de fundo
 
 -------------------------------- */
 
+/* Cores para texto */
+
+.text-preto {color:var(--pretoIFHT) !important;}
+.text-branco1 {color:#fff !important;}
+
+.text-cinza1 {color:var(--Cinza1) !important;}
+.text-cinza2 {color:var(--Cinza2) !important;}
+.text-cinza3 {color:var(--Cinza3) !important;}
+.text-cinza4 {color:var(--Cinza4) !important;}
+.text-cinza5 {color:var(--Cinza5) !important;}
+
+/*1 = cor normal; 2 = cor over; 3 = cor pressed*/
+.text-azul1 {color:var(--azulIFHT) !important;}
+.text-azul2 {color:var(--azulIFHT-over) !important;}
+.text-azul3 {color:var(--azulIFHT-pressed) !important;}
+
+.text-marinho1 {color:var(--marinhoIFHT) !important;}
+.text-marinho2 {color:var(--marinhoIFHT-over) !important;}
+.text-marinho3 {color:var(--marinhoIFHT-pressed) !important;}
+
+.text-turquesa1 {color:var(--turquesaIFHT) !important;}
+.text-turquesa2 {color:var(--turquesaIFHT-over) !important;}
+.text-turquesa3{color:var(--turquesaIFHT-pressed) !important;}
+
+.text-violeta1 {color:var(--violetaIFHT) !important;}
+.text-violeta2 {color:var(--violetaIFHT-over) !important;}
+.text-violeta3 {color:var(--violetaIFHT-pressed) !important;}
+
+.text-roxo1 {color:var(--roxoIFHT) !important;}
+.text-roxo2 {color:var(--roxoIFHT-over) !important;}
+.text-roxo3 {color:var(--roxoIFHT-pressed) !important;}
+
+.text-laranja1 {color:var(--laranjaIFHT) !important;}
+.text-laranja2 {color:var(--laranjaIFHT-over) !important;}
+.text-laranja3 {color:var(--laranjaIFHT-pressed) !important;}
+
+.text-amarelo1 {color:var(--amareloIFHT) !important;}
+.text-amarelo2 {color:var(--amareloIFHT-over) !important;}
+.text-amarelo3 {color:var(--amareloIFHT-pressed) !important;}
+
+.text-vermelho {color:var(--vermelho-apoioIFHT) !important;}
+.text-amarelo {color:var(--amarelo-apoioIFHT) !important;}
+.text-verde {color:var(--verde-apoioIFHT) !important;}
+
+
 /* -------------------------------- 
 
   Sidebar
@@ -401,6 +446,18 @@ pre {
   color: #fff !important;
 }
 
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show > .btn-primary.dropdown-toggle,
+.btn-primary.focus, 
+.btn-primary:focus {
+  background-color: var(--azulIFHT-pressed);
+  border-color: var(--azulIFHT-pressed);
+  color: var(--brancoIFHT-pressed) !important;
+}
+
+/*Botão secundário*/
+
 .btn-secondary {
   background-color:transparent;
   border-color:var(--azulIFHT);
@@ -411,6 +468,16 @@ pre {
   background-color: var(--azulIFHT-over);
   border-color: var(--azulIFHT-over);
   color: #fff !important;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, 
+.btn-secondary:not(:disabled):not(.disabled):active, 
+.show > .btn-secondary.dropdown-toggle,
+.btn-secondary.focus, 
+.btn-secondary:focus  {
+  background-color: var(--azulIFHT-pressed);
+  border-color: var(--azulIFHT-pressed);
+  color: var(--brancoIFHT-pressed) !important;
 }
 
 /* Ajuste nos botões de navegação da lição e dos exercícios de fixação*/

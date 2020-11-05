@@ -914,7 +914,7 @@
                                     <div class="saiba-mais-content">
                                       <p>A <strong>Gestão de Recursos Naturais (GRN)</strong> é o conjunto de ações destinadas a regular o uso, o controle e a proteção dos recursos naturais. Sua necessidade emergiu nos debates científico e político, principalmente nas décadas de 1960 e 1970, acerca do interesse e da preocupação de movimentos ambientalistas, regulamentações, organizações não-governamentais, organizações internacionais, dentre outros, quanto às questões ambientais e ao uso desordenado e devastador dos recursos naturais. </p>
                                       <p class="fonte float-right">LACERDA (2014, p.27)</p>
-                                      <div style="clear:both;"></div>
+                                      <div style="clearfix"></div>
                                     </div>
                                   </div>
                                 </div>
@@ -1036,7 +1036,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Fim do Box de Destaque -->
+                <!-- Fim do Destaque -->
 
                 <div class="container px-4">
                     <div class="row justify-content-center">
@@ -1143,7 +1143,7 @@
                                     <p class="orientacao align-self-center text-center my-5 d-none d-lg-block">
                                         <!-- <svg class="svg-inline--fa fa-hand-point-down fa-w-14" aria-hidden="true" data-prefix="far" data-icon="hand-point-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M188.8 512c45.616 0 83.2-37.765 83.2-83.2v-35.647a93.148 93.148 0 0 0 22.064-7.929c22.006 2.507 44.978-3.503 62.791-15.985C409.342 368.1 448 331.841 448 269.299V248c0-60.063-40-98.512-40-127.2v-2.679c4.952-5.747 8-13.536 8-22.12V32c0-17.673-12.894-32-28.8-32H156.8C140.894 0 128 14.327 128 32v64c0 8.584 3.048 16.373 8 22.12v2.679c0 6.964-6.193 14.862-23.668 30.183l-.148.129-.146.131c-9.937 8.856-20.841 18.116-33.253 25.851C48.537 195.798 0 207.486 0 252.8c0 56.928 35.286 92 83.2 92 8.026 0 15.489-.814 22.4-2.176V428.8c0 45.099 38.101 83.2 83.2 83.2zm0-48c-18.7 0-35.2-16.775-35.2-35.2V270.4c-17.325 0-35.2 26.4-70.4 26.4-26.4 0-35.2-20.625-35.2-44 0-8.794 32.712-20.445 56.1-34.926 14.575-9.074 27.225-19.524 39.875-30.799 18.374-16.109 36.633-33.836 39.596-59.075h176.752C364.087 170.79 400 202.509 400 248v21.299c0 40.524-22.197 57.124-61.325 50.601-8.001 14.612-33.979 24.151-53.625 12.925-18.225 19.365-46.381 17.787-61.05 4.95V428.8c0 18.975-16.225 35.2-35.2 35.2zM328 64c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24z"></path></svg> -->
                                         
-                                        <i class="far fa-hand-point-down" aria-hidden="true"></i> Toque nos botões dos cards para ver as informações.
+                                        <i class="far fa-hand-point-down" aria-hidden="true"></i> Clique nos botões dos cards para ver as informações.
                                     </p>
 
                                     <p class="orientacao align-self-center text-center my-5 d-block d-lg-none">
@@ -1533,13 +1533,11 @@
                         <div class="col-12 col-md-10">
                             <h2 class="title text-center mb-4">Modal</h2>
 
-                            <p>Utilizado para abrir um conteúdo em um box. Pode ser texto ou imagem. <strong>Cada modal tem o seu próprio id.</strong> O
-                                conteúdo deve ser inserido dentro da div &lt;div class="modal-body"&gt;.</p>
+                            <p>Utilizado para abrir um conteúdo em um box. Pode ser texto ou imagem. <strong>Cada modal tem o seu próprio id.</strong> O conteúdo deve ser inserido dentro da div &lt;div class="modal-body"&gt;.</p>
 
-                            <h5 class="title my-5 p-0 pb-1">Modal simples</h5>
+                            <h5 class="title  mt-5 mb-3 p-0 pb-1">Modal simples</h5>
                     
-                              <p>Exemplo de um <a href='#' data-toggle="modal" data-target="#modal1">modal </a>com texto e
-                                  imagem.</p>
+                              <p>Veja um exemplo de um <a href='#' data-toggle="modal" data-target="#modal1">modal </a>com texto e imagem.</p>
                     
                               <!-- Modal -->
                               <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1-titulo">
@@ -1576,9 +1574,12 @@
                               </div>
                               <!-- Fim do Modal -->
 
-                              <h5 class="title my-5 p-0 pb-1">Modal Glossário</h5>
+                              <h5 class="title mt-5 mb-3 p-0 pb-1">Modal Glossário, Saiba Mais, Atenção etc</h5>
+                              <p>Para abrir os boxes como um modal, basta adicionar a classe ao modal. Ex: <em>class="modal saiba-mais fade"</em> ou <em>class="modal glossario fade"</em></p>
 
-                              <p>Exemplo de um modal no estilo <a href='#' data-toggle="modal" data-target="#aula1-modal2">glossário</a>.</p>
+                              <p>Veja um exemplo de um modal no estilo <a href='#' data-toggle="modal" data-target="#aula1-modal2">glossário</a>.</p>
+
+                              <p>Veja um exemplo de um modal no estilo <a href='#' data-toggle="modal" data-target="#aula1-modal3">saiba mais</a>.</p>
 
                             <!-- Modal 2 -->
                             <div class="modal glossario fade" id="aula1-modal2" tabindex="-1" role="dialog" aria-labelledby="modal2-titulo">
@@ -1601,6 +1602,61 @@
                             </div>
                             <!-- Fim do Modal -->
 
+                            <!-- Modal 3 -->
+                            <div class="modal saiba-mais fade" id="aula1-modal3" tabindex="-1" role="dialog" aria-labelledby="aula1-modal3-titulo">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h4 class="modal-title" id="aula1-modal3-titulo">Saiba mais</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <p><strong>Sistemas de telefonia</strong> – quase todas as empresas empregam um sistema de ramais em seus telefones. Existe um número geral, que normalmente é o da telefonista ou da recepção, e um ramal para cada departamento. Logo que você começar a trabalhar na empresa, peça uma lista com todos os ramais. Assim, você poderá se comunicar com vários setores, sempre de acordo com a sua necessidade. Também é importante saber transferir as ligações de um ramal para outro.</p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- Fim do Modal 3 -->
+
+                            <h5 class="title  mt-5 mb-3 p-0 pb-1">Modal de Vídeo</h5>
+
+                            <p>Utilizado para abrir vídeos em modais. Ao abrir o modal, o vídeo toca automaticamente e ao clicar nos botões de fechar ele para.</p>
+
+                            <p><strong>Obs 1: Para incluir o JS no Moodle, copie e cole o código abaixo, modificando apenas o caminho do arquivo (em vermelho).</strong></p>
+
+                            <pre>
+                            <code>
+                            &ltscript type="text/javascript"&gt;addScript("<span style="color:var(--vermelho-apoioIFHT);">https://gai.ifht.net.br/pluginfile.php/7265/mod_folder/content/0/_js/video-modal.js</span>")&lt/script&gt;
+                            </code>
+                            </pre>
+
+                            <p><strong>Obs 2: Atente-se que o link do vídeo fica dentro de um atributo chamado <em>data-theVideo</em> localizado na tag &lt;a&gt;</strong></p>
+
+                            <p><a href="#" data-toggle="modal" data-target="#aula6-videoModal1" data-theVideo="http://www.youtube.com/embed/AGBGII7S2a8">Exemplo de Vídeo dentro de modal</a></p>
+                            
+                            <!-- Vídeo Modal 1 -->
+                            <div class="modal fade" id="aula6-videoModal1" tabindex="-1" role="dialog" aria-labelledby="aula6-videoModal1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close closeVideo" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <div>
+                                                <iframe width="100%" height="350" src=""></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default closeVideo" data-dismiss="modal">Fechar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim de Vídeo Modal 1 -->
                         </div>
                     </div>
                 </div>
@@ -1680,12 +1736,49 @@
                                             <source src="audio/example-2.mp3" type="audio/mpeg">
                                         </audio>
                                     </div>
-                                    <p class="legenda text-center">Áúdio 1 - Nome do Áudio (Se necessário)</p>
+                                    <p class="legenda text-center">Áudio 1 - Nome do Áudio (Se necessário)</p>
                                     <p class="fonte text-center">Fonte: IFHT (2020) (Se necessário)</p>
                                 </div>
                             </div>
                             <!-- Fim de Podcast -->
 
+                            <h4 class="title">Podcast 2</h4>
+
+                            <p>Somente com a tag audio</p>
+
+                            <!-- Podcast com audio local-->
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-12 col-md-10 p-0">
+                                    <audio controls>
+                                        <source src="audio/example-1.mp3" type="audio/mpeg">
+                                      Seu navegador não suporta este elemento de áudio.
+                                    </audio>
+        
+                                    <p class="legenda text-center">Áudio 1 - Nome do Áudio (Se necessário)</p>
+                                    <p class="fonte text-center">Fonte: IFHT (2020) (Se necessário)</p>
+                                </div>
+                            </div>
+                            <!-- Fim de Podcast -->
+
+                            <h4 class="title">Podcast 3</h4>
+
+                            <p>Audio hospedado em pasta no Moodle (link do moodle)</p>
+
+                             <!-- Podcast com audio local-->
+                             <div class="row justify-content-center mt-5">
+                                <div class="col-12 col-md-10 p-0">
+                                    <div class="podcast">
+                                        <audio controls>
+                                            <source src="https://gai.ifht.net.br/pluginfile.php/7295/mod_folder/content/0/audio/example-1.mp3" type="audio/mpeg">
+                                        Seu navegador não suporta este elemento de áudio.
+                                        </audio>
+                                    </div>
+        
+                                    <p class="legenda text-center">Áudio 1 - Nome do Áudio (Se necessário)</p>
+                                    <p class="fonte text-center">Fonte: IFHT (2020) (Se necessário)</p>
+                                </div>
+                            </div>
+                            <!-- Fim de Podcast -->
                         </div>
                     </div>
                 </div>
@@ -1702,13 +1795,15 @@
 
                             <div class="row wow justify-content-center">
                                 <div class="col-12 col-lg-10">
-                                    <p>Utilizado para exibir diferentes conteúdos (imagem ou texto) por partes.</p>
+                                    <p>Utilizado para exibir diferentes conteúdos (imagem ou texto) por partes. <strong>Obs: Atente-se ao id do carrossel!</strong></p>
+   
                                     <p><strong>Atenção:</strong> A seta de anterior e próximo pode ser <strong>clara ou escura</strong>. Para escolher qual das duas utilizar, atente-se às classes <strong>white-arrow</strong> e <strong>dark-arrow</strong>, aplicadas ao controle do slider.</p>
+                                    
 
                                     <h5 class="title my-5 p-0 pb-1">Slider somente imagens:</h5>
 
-                                    <!--Slider-->
-                                    <section id="carousel1" class="carousel slide my-5 slider-somente-imagem" data-ride="false" data-touch="true" data-keyboard="true" aria-labelledby="carouselheading">
+                                    <!--Slider somente imagens-->
+                                    <section id="carousel1" class="carousel slide my-5 slider-somente-imagem" data-interval="false" data-touch="true" data-keyboard="true" aria-labelledby="carouselheading">
                                     <div class="row justify-content-center m-0">
                                         <div class="col-12 col-md-12 col-lg-12 px-0">
                                             <div class="box-quote multi-border shadow border-1 col-12 m-0 p-0">
@@ -1768,8 +1863,8 @@
 
                                     <h5 class="title my-5 p-0 pb-1">Slider somente texto:</h5>
 
-                                    <!--Slider-->
-                                    <section id="carousel2" class="carousel slide" data-ride="false"  data-touch="true" data-keyboard="true"
+                                    <!--Slider somente texto-->
+                                    <section id="carousel2" class="carousel slide" data-interval="false" data-touch="true" data-keyboard="true"
                                         aria-labelledby="carouselheading">
                                         <div class="row justify-content-center px-md-3">
                                         <div class="box-quote col-11 col-md-12 col-lg-12 px-0 justify-content-center d-flex flex-column carousel-texto">
@@ -1845,8 +1940,8 @@
 
                                     <h5 class="title my-5 p-0 pb-1">Slider imagem horizontal e texto:</h5>
 
-                                    <!--Slider-->
-                                    <section id="carousel3" class="carousel slide" data-ride="false"  data-touch="true" data-keyboard="true" aria-labelledby="carouselheading">
+                                    <!--Slider imagem horizontal e texto-->
+                                    <section id="carousel3" class="carousel slide" data-interval="false" data-touch="true" data-keyboard="true" aria-labelledby="carouselheading">
                                         <div class="row justify-content-center m-0 p-0">
                                             <div class="col-12 col-md-12 col-lg-12 px-0">
                                                 <div class="box-quote multi-border shadow border-1 col-12 m-0 p-0">
@@ -1934,8 +2029,8 @@
 
                                     <p><strong>Obs: No mobile, ele aparece semelhante ao slider citado acima.</strong></p>
 
-                                    <!--Slider-->
-                                    <section id="carousel4" class="carousel slide mt-5 slider-imagem-vertical" data-ride="false" data-touch="true" data-keyboard="true"
+                                    <!--Slider imagem vertical e texto-->
+                                    <section id="carousel4" class="carousel slide mt-5 slider-imagem-vertical" data-interval="false" data-touch="true" data-keyboard="true"
                                         aria-labelledby="carouselheading">
                                         <div class="row justify-content-center px-md-3">
                                             <div class="box-quote col-11 col-md-12 col-lg-12 m-0 p-0 justify-content-center d-flex flex-column carousel-texto">
@@ -2171,8 +2266,8 @@
                                       <tbody> 
                                         <tr> 
                                            <td rowspan="8" class="text-center">Suliformes</td>
-                                           <td class="text-center" fregatidae<="" td="">
-                                           </td><td class="text-center"><em>Fregata magnificens</em></td>
+                                           <td class="text-center">Fregatidae</td>
+                                           <td class="text-center"><em>Fregata magnificens</em></td>
                                            <td class="text-center">Tesourão</td>
                                            <td class="text-center">Alto</td>
                                            <td class="text-center">75 +- 10%</td>
@@ -2359,6 +2454,7 @@
                             <h2 class="title text-center mb-4">Timeline Vertical</h2>
 
                             <p>Usado para descrever uma sequência de eventos ao longo do tempo.</p>
+                            <p>É possível utilizar números ou ícones (imagem ou fonte) nas bolinhas.</p>
 
                             <p><strong>Obs: Para incluir o JS no Moodle, copie e cole o código abaixo, modificando apenas o caminho do arquivo (em vermelho).</strong></p>
 
@@ -2375,18 +2471,22 @@
                                     <!-- Ítem 1 -->
                                     <div class="cd-timeline__block js-cd-block ">
                                         <div class="cd-timeline_img cd-timeline__option1 cd-timeline_img--bounce-in">
+                                        <!-- Escolha se deseja usar texto ou ícone (img ou fonte) -->
                                         <h4 class="ano">1</h4>
+                                        <!-- <img src="img/ic-location.svg" alt="Location"> -->
+                                        <!-- <i class="fas fa-video"></i> -->
                                         </div> <!-- cd-timeline_img -->
                     
                                         <div class="cd-timeline__content js-cd-content text-md-center">
                                         <p>Há maior aproximação entre as pessoas.</p>
+                                        <a href="#" target="_blank" class="btn btn-secondary align-middle">Botão (se houver)</a>
                                         </div> <!-- cd-timeline__content -->
                                     </div> <!-- cd-timeline__block -->
 
                                     <!-- Ítem 2 -->
                                     <div class="cd-timeline__block js-cd-block">
                                         <div class="cd-timeline_img cd-timeline__option1">
-                                        <h4 class="ano">2</h4>
+                                        <img src="img/ic-location.svg" alt="Location">
                                         </div> <!-- cd-timeline_img -->
                     
                                         <div class="cd-timeline__content js-cd-content text-md-center">
@@ -2397,7 +2497,7 @@
                                     <!-- Ítem 3 -->
                                     <div class="cd-timeline__block js-cd-block">
                                         <div class="cd-timeline_img cd-timeline__option1">
-                                        <h4 class="ano">3</h4>
+                                            <i class="fas fa-video"></i>
                                         </div> <!-- cd-timeline_img -->
                     
                                         <div class="cd-timeline__content js-cd-content text-md-center">
@@ -2757,6 +2857,7 @@
 <script src="js/antes-e-depois.js"></script>
 <script src="js/audio/dist/js/green-audio-player.js"></script>
 <script src="js/podcast.js"></script>
+<script src="js/video-modal.js"></script>
 
 </html>
 
